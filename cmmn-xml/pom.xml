@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cmmn-xml</groupId>
+  <artifactId>cmmn-xml</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>cmmn-rdf-xml-export</module>
+    <module>cmmn-xml-builder</module>
+    <module>cmmn-xml-core</module>
+    <module>cmmn-xml-export</module>
+    <module>cmmn-xml-test</module>
+    <module>cmmn-xml-mvn-plugin</module>
+  </modules>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+</project>

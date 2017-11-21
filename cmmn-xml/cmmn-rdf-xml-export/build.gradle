@@ -1,0 +1,47 @@
+version '1.0.0'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':cmmn-xml-core')
+    compile project(':cmmn-xml-builder')
+
+    compile 'org.slf4j:slf4j-api:1.7.13'
+    compile 'org.slf4j:slf4j-log4j12:1.7.13'
+
+    compile group: 'org.apache.jena', name: 'jena-core', version: '3.3.0'
+
+    testCompile project(':cmmn-xml-test')
+
+    testCompile 'org.easytesting:fest-assert:1.4'
+    testCompile 'org.testng:testng:6.9.4'
+    testCompile 'org.assertj:assertj-core:3.5.2'
+}
+
+task toPom {
+    doLast {
+        pom {
+            project {
+                groupId 'cmmn-xml'
+                artifactId 'cmmn-rdf-xml-export'
+                version '1.0.0'
+
+                properties {
+                    'maven.compiler.source' '1.8'
+                    'maven.compiler.target' '1.8'
+                }
+
+            }
+        }.writeTo("pom.xml")
+    }
+}
+
+
+test {
+    useTestNG()
+}

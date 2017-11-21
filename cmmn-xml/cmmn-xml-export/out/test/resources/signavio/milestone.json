@@ -1,0 +1,289 @@
+{
+  "resourceId": "canvas",
+  "formats": {},
+  "ssextensions": [],
+  "bounds": {
+    "upperLeft": {
+      "x": 0,
+      "y": 0
+    },
+    "lowerRight": {
+      "x": 1485,
+      "y": 1050
+    }
+  },
+  "stencilset": {
+    "namespace": "http://signavio.com/stencilsets/cmmn-1.0#",
+    "url": "/stencilsets/cmmn-1.0/cmmn-1.0.json?version=11.2.0"
+  },
+  "stencil": {
+    "id": "Case"
+  },
+  "properties": {
+    "orientation": "horizontal",
+    "documentation": ""
+  },
+  "childShapes": [
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-8EC7603E-40E5-4DF1-B9F2-A05D51FCE50A"
+        },
+        {
+          "resourceId": "sid-7AFAD241-0CF9-4299-945C-11F14418EFD6"
+        }
+      ],
+      "resourceId": "sid-mile",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 294.96262720700076,
+          "y": 225
+        },
+        "lowerRight": {
+          "x": 424.96262720700076,
+          "y": 285
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Milestone"
+      },
+      "dockers": [],
+      "properties": {
+        "bgcolor": "#FFFFCC",
+        "name": "Mile",
+        "description": "",
+        "repetition": false,
+        "required": false,
+        "bordercolor": "#000000"
+      },
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [],
+      "resourceId": "sid-8EC7603E-40E5-4DF1-B9F2-A05D51FCE50A",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 287.92525441400153,
+          "y": 248.18136072413205
+        },
+        "lowerRight": {
+          "x": 301.92525441400153,
+          "y": 269.18136072413205
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "EntryCriterion"
+      },
+      "dockers": [
+        {
+          "x": 12,
+          "y": 33
+        }
+      ],
+      "properties": {},
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-31D3D0FB-66C5-459E-849F-8BDA21864A70"
+        }
+      ],
+      "resourceId": "sid-evn",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 195,
+          "y": 244.18136072413205
+        },
+        "lowerRight": {
+          "x": 225,
+          "y": 274.18136072413205
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "EventListener"
+      },
+      "dockers": [
+        {
+          "x": 210,
+          "y": 259.18136072413205
+        }
+      ],
+      "properties": {
+        "name": "",
+        "description": ""
+      },
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-4DDF0974-CADD-462C-BAE3-5E573F437CB1"
+        }
+      ],
+      "resourceId": "sid-7AFAD241-0CF9-4299-945C-11F14418EFD6",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 418.38677964087725,
+          "y": 243.87137340989398
+        },
+        "lowerRight": {
+          "x": 432.38677964087725,
+          "y": 264.871373409894
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "EntryCriterion"
+      },
+      "dockers": [
+        {
+          "x": 117.03737279299924,
+          "y": 29.5
+        }
+      ],
+      "properties": {},
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [],
+      "resourceId": "sid-ptask",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 477.38677964087725,
+          "y": 225
+        },
+        "lowerRight": {
+          "x": 577.3867796408772,
+          "y": 305
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "ProcessTask"
+      },
+      "dockers": [],
+      "properties": {
+        "discretionary": false,
+        "entry": "",
+        "bgcolor": "#FFFFCC",
+        "name": "A",
+        "description": "",
+        "repetition": false,
+        "manualactivation": false,
+        "required": false,
+        "bordercolor": "#000000"
+      },
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-8EC7603E-40E5-4DF1-B9F2-A05D51FCE50A"
+        }
+      ],
+      "resourceId": "sid-31D3D0FB-66C5-459E-849F-8BDA21864A70",
+      "formats": {},
+      "dockers": [
+        {
+          "x": 15,
+          "y": 15
+        },
+        {
+          "x": 8,
+          "y": 11
+        }
+      ],
+      "labels": [],
+      "target": {
+        "resourceId": "sid-8EC7603E-40E5-4DF1-B9F2-A05D51FCE50A"
+      },
+      "bounds": {
+        "upperLeft": {
+          "x": 225.7684031024065,
+          "y": 259.18136072413205
+        },
+        "lowerRight": {
+          "x": 288.2123439129076,
+          "y": 259.18136072413205
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Connector"
+      },
+      "properties": {
+        "bordercolor": "#000000"
+      },
+      "childShapes": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-ptask"
+        }
+      ],
+      "resourceId": "sid-4DDF0974-CADD-462C-BAE3-5E573F437CB1",
+      "formats": {},
+      "dockers": [
+        {
+          "x": 8,
+          "y": 11
+        },
+        {
+          "x": 12.999999999999993,
+          "y": 29.871373409893977
+        }
+      ],
+      "labels": [],
+      "target": {
+        "resourceId": "sid-ptask"
+      },
+      "bounds": {
+        "upperLeft": {
+          "x": 432.38677964087725,
+          "y": 254.87137340989398
+        },
+        "lowerRight": {
+          "x": 477.38677964087725,
+          "y": 254.87137340989398
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Connector"
+      },
+      "properties": {
+        "bordercolor": "#000000"
+      },
+      "childShapes": []
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+pluginRepositories {
+    gradlePluginPortal()
+}
+
+
+include 'cmmn-xml-core',
+        'cmmn-xml-builder',
+        'cmmn-xml-test',
+        'cmmn-xml-export',
+        'cmmn-rdf-xml-export'

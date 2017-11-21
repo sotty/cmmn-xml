@@ -1,0 +1,137 @@
+{
+  "resourceId": "canvas",
+  "ssextensions": [],
+  "offset": {
+    "x": 6.698980570263302E-6,
+    "y": 0
+  },
+  "bounds": {
+    "upperLeft": {
+      "x": 0,
+      "y": 0
+    },
+    "lowerRight": {
+      "x": 1485,
+      "y": 1050
+    }
+  },
+  "stencilset": {
+    "namespace": "http://signavio.com/stencilsets/cmmn-1.0#",
+    "url": "/stencilsets/cmmn-1.0/cmmn-1.0.json?version=11.2.0"
+  },
+  "stencil": {
+    "id": "Case"
+  },
+  "properties": {
+    "orientation": "horizontal",
+    "documentation": "This is a Doc"
+  },
+  "childShapes": [
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-7A1FAC1B-0409-44E6-B12F-5520DD091C70"
+        },
+        {
+          "resourceId": "sid-2DD446FA-4561-4914-8F2B-F953B02B6665"
+        }
+      ],
+      "resourceId": "sid-BC817AFD-637F-43F8-9C9C-A613C8F8325F",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 225,
+          "y": 135
+        },
+        "lowerRight": {
+          "x": 325,
+          "y": 215
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "ProcessTask"
+      },
+      "dockers": [],
+      "properties": {
+        "discretionary": false,
+        "entry": "",
+        "bgcolor": "#FFFFCC",
+        "name": "a",
+        "description": "",
+        "repetition": false,
+        "manualactivation": false,
+        "required": false,
+        "bordercolor": "#000000"
+      },
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [],
+      "resourceId": "sid-0A6E447C-7295-4862-BA5D-1C513B9E4654",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 225,
+          "y": 260
+        },
+        "lowerRight": {
+          "x": 325,
+          "y": 340
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Task"
+      },
+      "dockers": [],
+      "properties": {
+        "discretionary": false,
+        "bgcolor": "#FFFFCC",
+        "name": "b",
+        "description": "",
+        "repetition": false,
+        "manualactivation": false,
+        "required": false,
+        "bordercolor": "#000000"
+      },
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [],
+      "resourceId": "sid-2DD446FA-4561-4914-8F2B-F953B02B6665",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 217.25876524390245,
+          "y": 175.91677782012195
+        },
+        "lowerRight": {
+          "x": 231.25876524390245,
+          "y": 196.91677782012195
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "EntryCriterion"
+      },
+      "dockers": [
+        {
+          "x": 10,
+          "y": 49
+        }
+      ],
+      "properties": {},
+      "childShapes": [],
+      "labels": []
+    }
+  ]
+}

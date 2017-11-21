@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:oryx="http://oryx-editor.org"
+     id="sid-73D408AA-30E2-4FD1-8777-204D7A90BB19" width="474" height="401"
+     oryx:signavioversion="11.2.0">
+    <defs>
+        <marker id="sizeGuide-start" refX="0" refY="5" markerUnits="userSpaceOnUse" markerWidth="6" markerHeight="20"
+                orient="auto">
+            <path d="M 6 2 L 1 5 L 6 8 M 0 0 L 0 20" fill="none" stroke="silver"/>
+        </marker>
+        <marker id="sizeGuide-end" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="6" markerHeight="20"
+                orient="auto">
+            <path d="M 0 2 L 5 5 L 0 8 M 6 0 L 6 20" fill="none" stroke="silver"/>
+        </marker>
+    </defs>
+    <g stroke="black" font-family="'Open Sans', 'Ezra SIL', 'DejaVu Sans', HanaMinA, HanaMinB, sans-serif"
+       font-size-adjust="none" font-style="normal" font-variant="normal" font-weight="normal" line-heigth="normal"
+       font-size="12">
+        <g class="stencils" transform="translate(-275, -245)">
+            <g class="me"/>
+            <g class="children">
+                <g id="svg-sid-C597A5DD-3CFE-45D8-B51D-742293C643F8">
+                    <g class="stencils" transform="translate(300, 270)">
+                        <g class="me">
+                            <g pointer-events="fill" oryx:minimumSize="200 160" oryx:maximumSize=""
+                               id="sid-CAFF8690-829D-4CE6-B63B-40B1091DE808" title="Expanded Stage">
+                                <defs id="sid-CAFF8690-829D-4CE6-B63B-40B1091DE808_sid-CAFF8690-829D-4CE6-B63B-40B1091DE808_17">
+                                    <radialGradient id="sid-CAFF8690-829D-4CE6-B63B-40B1091DE808background" cx="10%"
+                                                    cy="10%" r="100%" fx="10%" fy="10%">
+                                        <stop offset="0%" stop-color="#ffffff" stop-opacity="1"
+                                              id="sid-CAFF8690-829D-4CE6-B63B-40B1091DE808_sid-CAFF8690-829D-4CE6-B63B-40B1091DE808_18"/>
+                                        <stop id="sid-CAFF8690-829D-4CE6-B63B-40B1091DE808fill_el" offset="100%"
+                                              stop-color="#ffffff" stop-opacity="1"/>
+                                    </radialGradient>
+                                </defs>
+                                <polygon id="sid-CAFF8690-829D-4CE6-B63B-40B1091DE808bg_frame"
+                                         oryx:anchors="bottom top right left"
+                                         points="0 43.875 0 307.125 63.60000000000001 351 360.40000000000003 351 424 307.125 424 43.875 360.40000000000003 0 63.60000000000001 0 "
+                                         stroke="black" stroke-width="1" fill="white"/>
+                                <text font-size="12" id="sid-CAFF8690-829D-4CE6-B63B-40B1091DE808text_name" x="212"
+                                      y="5" oryx:align="top center" oryx:fittoelem="text_frame" oryx:anchors="top"
+                                      oryx:positioning="inner" stroke="none" stroke-width="0pt" letter-spacing="-0.01px"
+                                      fill="#000000" transform="rotate(0.001 212 5)" oryx:fontSize="12"
+                                      text-anchor="middle" style="display: none;"/>
+                                <title>Expanded Stage</title>
+                            </g>
+                        </g>
+                        <g class="children">
+                            <g id="svg-sid-FDBBCA11-8D17-4734-80B3-BFF2DBCC6FD2">
+                                <g class="stencils" transform="translate(120, 90)">
+                                    <g class="me">
+                                        <g pointer-events="fill" id="sid-FBEE7ED0-28B4-4245-A8C9-1A505107BB17"
+                                           title="Event Listener">
+                                            <defs id="sid-FBEE7ED0-28B4-4245-A8C9-1A505107BB17_sid-FBEE7ED0-28B4-4245-A8C9-1A505107BB17_6">
+                                                <radialGradient id="sid-FBEE7ED0-28B4-4245-A8C9-1A505107BB17background"
+                                                                cx="10%" cy="10%" r="100%" fx="10%" fy="10%">
+                                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="1"
+                                                          id="sid-FBEE7ED0-28B4-4245-A8C9-1A505107BB17_sid-FBEE7ED0-28B4-4245-A8C9-1A505107BB17_7"/>
+                                                    <stop id="sid-FBEE7ED0-28B4-4245-A8C9-1A505107BB17fill_el"
+                                                          offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+                                                </radialGradient>
+                                            </defs>
+                                            <circle id="sid-FBEE7ED0-28B4-4245-A8C9-1A505107BB17bg_frame" cx="15"
+                                                    cy="15" r="15" stroke="black"
+                                                    fill="url(#sid-FBEE7ED0-28B4-4245-A8C9-1A505107BB17background) white"
+                                                    stroke-width="1"/>
+                                            <circle id="sid-FBEE7ED0-28B4-4245-A8C9-1A505107BB17frame" cx="15" cy="15"
+                                                    r="12" stroke="black" fill="none" stroke-width="1"/>
+                                            <text font-size="11" id="sid-FBEE7ED0-28B4-4245-A8C9-1A505107BB17text_name"
+                                                  x="15" y="32" oryx:positioning="outter" oryx:distance="9px 9px"
+                                                  oryx:align="top center" stroke="none" stroke-width="0pt"
+                                                  letter-spacing="-0.01px" fill="#000000"
+                                                  transform="rotate(0.001 15 32)" oryx:fontSize="11"
+                                                  text-anchor="middle" style="display: none;"/>
+                                            <title>Event Listener</title>
+                                        </g>
+                                    </g>
+                                    <g class="children"/>
+                                    <g class="edge"/>
+                                </g>
+                                <g class="controls">
+                                    <g class="dockers"/>
+                                    <g class="magnets" transform="translate(120, 90)"/>
+                                </g>
+                            </g>
+                            <g id="svg-sid-CDEB35F6-8EEF-4F85-8D79-1BFDB9B2B5C3">
+                                <g class="stencils" transform="translate(255, 105)">
+                                    <g class="me">
+                                        <g pointer-events="fill" id="sid-DA5558AD-51B2-456C-A305-D74192A943D1"
+                                           title="Timer Event Listener">
+                                            <defs id="sid-DA5558AD-51B2-456C-A305-D74192A943D1_sid-DA5558AD-51B2-456C-A305-D74192A943D1_6">
+                                                <radialGradient id="sid-DA5558AD-51B2-456C-A305-D74192A943D1background"
+                                                                cx="10%" cy="10%" r="100%" fx="10%" fy="10%">
+                                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="1"
+                                                          id="sid-DA5558AD-51B2-456C-A305-D74192A943D1_sid-DA5558AD-51B2-456C-A305-D74192A943D1_7"/>
+                                                    <stop id="sid-DA5558AD-51B2-456C-A305-D74192A943D1fill_el"
+                                                          offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+                                                </radialGradient>
+                                            </defs>
+                                            <circle id="sid-DA5558AD-51B2-456C-A305-D74192A943D1bg_frame" cx="15"
+                                                    cy="15" r="15" stroke="black"
+                                                    fill="url(#sid-DA5558AD-51B2-456C-A305-D74192A943D1background) white"
+                                                    stroke-width="1"/>
+                                            <circle id="sid-DA5558AD-51B2-456C-A305-D74192A943D1frame" cx="15" cy="15"
+                                                    r="12" stroke="black" fill="none" stroke-width="1"/>
+                                            <g id="sid-DA5558AD-51B2-456C-A305-D74192A943D1TimerEventListener">
+                                                <circle id="sid-DA5558AD-51B2-456C-A305-D74192A943D1circle" cx="15"
+                                                        cy="15" r="10" stroke="black" fill="none" stroke-width="1"/>
+                                                <path id="sid-DA5558AD-51B2-456C-A305-D74192A943D1path1"
+                                                      d=" M15 5  L15 8  M20 6  L18.5 9  M24 10  L21 11.5  M25 15  L22 15  M24 20  L21 18.5  M20 24  L18.5 21  M15 25  L15 22  M10 24  L11.5 21  M6 20  L9 18.5  M5 15  L8 15  M6 10  L9 11.5  M10 6  L11.5 9  M17 8  L15 15  L19 15 "
+                                                      fill="none" stroke="black"/>
+                                            </g>
+                                            <text font-size="11" id="sid-DA5558AD-51B2-456C-A305-D74192A943D1text_name"
+                                                  x="15" y="32" oryx:positioning="outter" oryx:distance="9px 9px"
+                                                  oryx:align="top center" stroke="none" stroke-width="0pt"
+                                                  letter-spacing="-0.01px" fill="#000000"
+                                                  transform="rotate(0.001 15 32)" oryx:fontSize="11"
+                                                  text-anchor="middle" style="display: none;"/>
+                                            <title>Timer Event Listener</title>
+                                        </g>
+                                    </g>
+                                    <g class="children"/>
+                                    <g class="edge"/>
+                                </g>
+                                <g class="controls">
+                                    <g class="dockers"/>
+                                    <g class="magnets" transform="translate(255, 105)"/>
+                                </g>
+                            </g>
+                            <g id="svg-sid-240A5780-10D7-4F42-BCF1-83A0DE3D156F">
+                                <g class="stencils" transform="translate(179.50199999999998, 192.99999999999997)">
+                                    <g class="me">
+                                        <g pointer-events="fill" id="sid-B2A40349-1402-4789-A782-5F409EE8B870"
+                                           title="User Event Listener">
+                                            <defs id="sid-B2A40349-1402-4789-A782-5F409EE8B870_sid-B2A40349-1402-4789-A782-5F409EE8B870_6">
+                                                <radialGradient id="sid-B2A40349-1402-4789-A782-5F409EE8B870background"
+                                                                cx="10%" cy="10%" r="100%" fx="10%" fy="10%">
+                                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="1"
+                                                          id="sid-B2A40349-1402-4789-A782-5F409EE8B870_sid-B2A40349-1402-4789-A782-5F409EE8B870_7"/>
+                                                    <stop id="sid-B2A40349-1402-4789-A782-5F409EE8B870fill_el"
+                                                          offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+                                                </radialGradient>
+                                            </defs>
+                                            <circle id="sid-B2A40349-1402-4789-A782-5F409EE8B870bg_frame"
+                                                    cx="15.497999999999996" cy="15.501000000000003" r="15"
+                                                    stroke="black"
+                                                    fill="url(#sid-B2A40349-1402-4789-A782-5F409EE8B870background) white"
+                                                    stroke-width="1"/>
+                                            <circle id="sid-B2A40349-1402-4789-A782-5F409EE8B870frame"
+                                                    cx="15.497999999999994" cy="15.501000000000005" r="12"
+                                                    stroke="black" fill="none" stroke-width="1"/>
+                                            <g id="sid-B2A40349-1402-4789-A782-5F409EE8B870UserEventListener"
+                                               transform="scale(0.7,0.7) translate(10,8)">
+                                                <path id="sid-B2A40349-1402-4789-A782-5F409EE8B870userPath"
+                                                      oryx:anchors="top bottom left right"
+                                                      style="opacity:1;fill:#F4F6F7;" stroke="black"
+                                                      d=" M0.08299999999999927 23.668000000000006  h24.08299999999999  v-7.833000000000004  c0 0 -2.3329999999999993 -3.9170000000000016 -7.0829999999999975 -5.1670000000000025  h-9.249999999999996  c-4.416999999999998 1.3330000000000006 -7.8329999999999975 5.750000000000003 -7.8329999999999975 5.750000000000003  L0.08299999999999927 23.668000000000006  z"/>
+                                                <path id="sid-B2A40349-1402-4789-A782-5F409EE8B870userPath2"
+                                                      oryx:anchors="top bottom left right" style="opacity:1;fill:none;"
+                                                      stroke="black"
+                                                      d=" M5.497999999999999 19.500999999999998  L5.497999999999999 23.501000000000005 "/>
+                                                <path id="sid-B2A40349-1402-4789-A782-5F409EE8B870userPath3"
+                                                      oryx:anchors="top bottom left right" style="opacity:1;fill:none;"
+                                                      stroke="black"
+                                                      d=" M19.497999999999998 19.500999999999998  L19.497999999999998 23.501000000000005 "/>
+                                                <circle id="sid-B2A40349-1402-4789-A782-5F409EE8B870userCircle"
+                                                        oryx:anchors="top bottom left right" fill="#000000"
+                                                        stroke="black" cx="12.499999999999998" cy="5.417000000000003"
+                                                        r="5.416999999999998"/>
+                                                <path id="sid-B2A40349-1402-4789-A782-5F409EE8B870userPath4"
+                                                      oryx:anchors="top bottom left right"
+                                                      style="opacity:1;fill:#F0EFF0;" stroke="black"
+                                                      d=" M7.540999999999999 6.584000000000001  c0 0 2.8139999999999983 -2.426000000000002 5.375999999999997 -1.807000000000001  s4.623999999999997 -0.6930000000000004 4.623999999999997 -0.6930000000000004  c0.24999999999999983 1.688000000000001 0.041999999999999975 3.7500000000000027 -1.457999999999999 5.584000000000003  c0 0 1.0829999999999993 0.7500000000000004 1.0829999999999993 1.5000000000000009  s0.12499999999999992 1.8750000000000013 -0.9999999999999993 3.0000000000000018  s-5.4999999999999964 1.2500000000000009 -6.749999999999996 0  S8.165999999999997 12.335000000000004 8.165999999999997 11.501000000000005  s0.5829999999999996 -1.2500000000000009 1.2499999999999991 -1.9170000000000014  C8.332999999999998 9.001000000000003 6.916999999999999 7.209000000000001 7.540999999999999 6.584000000000001  z"/>
+                                            </g>
+                                            <text font-size="11" id="sid-B2A40349-1402-4789-A782-5F409EE8B870text_name"
+                                                  x="15" y="32" oryx:positioning="outter" oryx:distance="9px 9px"
+                                                  oryx:align="top center" stroke="none" stroke-width="0pt"
+                                                  letter-spacing="-0.01px" fill="#000000"
+                                                  transform="rotate(0.001 15 32)" oryx:fontSize="11"
+                                                  text-anchor="middle" style="display: none;"/>
+                                            <title>User Event Listener</title>
+                                        </g>
+                                    </g>
+                                    <g class="children"/>
+                                    <g class="edge"/>
+                                </g>
+                                <g class="controls">
+                                    <g class="dockers"/>
+                                    <g class="magnets" transform="translate(179.50199999999998, 192.99999999999997)"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g class="edge"/>
+                    </g>
+                    <g class="controls">
+                        <g class="dockers"/>
+                        <g class="magnets" transform="translate(300, 270)"/>
+                    </g>
+                </g>
+            </g>
+            <g class="edge"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:oryx="http://oryx-editor.org"
+     id="sid-73D408AA-30E2-4FD1-8777-204D7A90BB19" width="342.39422607421875" height="130"
+     oryx:signavioversion="11.2.0">
+    <defs>
+        <marker id="sizeGuide-start" refX="0" refY="5" markerUnits="userSpaceOnUse" markerWidth="6" markerHeight="20"
+                orient="auto">
+            <path d="M 6 2 L 1 5 L 6 8 M 0 0 L 0 20" fill="none" stroke="silver"/>
+        </marker>
+        <marker id="sizeGuide-end" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="6" markerHeight="20"
+                orient="auto">
+            <path d="M 0 2 L 5 5 L 0 8 M 6 0 L 6 20" fill="none" stroke="silver"/>
+        </marker>
+    </defs>
+    <g stroke="black" font-family="'Open Sans', 'Ezra SIL', 'DejaVu Sans', HanaMinA, HanaMinB, sans-serif"
+       font-size-adjust="none" font-style="normal" font-variant="normal" font-weight="normal" line-heigth="normal"
+       font-size="12">
+        <g class="stencils" transform="translate(-307.60577392578125, -244.95883178710938)">
+            <g class="me"/>
+            <g class="children">
+                <g id="svg-sid-D9B5764C-32BF-478D-9538-FCE829EE9EF7">
+                    <g class="stencils" transform="translate(332.6057872855854, 269.95884472593764)">
+                        <g class="me">
+                            <g pointer-events="fill" oryx:minimumSize="50 40"
+                               id="sid-ADDB7BD1-4441-4F3F-8A34-364A3650F893" title="Task">
+                                <defs id="sid-ADDB7BD1-4441-4F3F-8A34-364A3650F893_sid-ADDB7BD1-4441-4F3F-8A34-364A3650F893_17">
+                                    <radialGradient id="sid-ADDB7BD1-4441-4F3F-8A34-364A3650F893background" cx="10%"
+                                                    cy="10%" r="100%" fx="10%" fy="10%">
+                                        <stop offset="0%" stop-color="#ffffff" stop-opacity="1"
+                                              id="sid-ADDB7BD1-4441-4F3F-8A34-364A3650F893_sid-ADDB7BD1-4441-4F3F-8A34-364A3650F893_18"/>
+                                        <stop id="sid-ADDB7BD1-4441-4F3F-8A34-364A3650F893fill_el" offset="100%"
+                                              stop-color="#FFFFCC" stop-opacity="1"/>
+                                    </radialGradient>
+                                </defs>
+                                <rect id="sid-ADDB7BD1-4441-4F3F-8A34-364A3650F893bg_frame"
+                                      oryx:resize="vertical horizontal" x="0" y="0" width="100" height="80" rx="10"
+                                      ry="10" stroke="#000000" stroke-width="1"
+                                      fill="url(#sid-ADDB7BD1-4441-4F3F-8A34-364A3650F893background) #ffffcc"/>
+                                <text font-size="12" id="sid-ADDB7BD1-4441-4F3F-8A34-364A3650F893text_name" x="50"
+                                      y="40" oryx:align="middle center" oryx:fittoelem="text_frame" stroke="none"
+                                      stroke-width="0pt" letter-spacing="-0.01px" fill="#000000"
+                                      transform="rotate(0.001 50 40)" oryx:fontSize="12" text-anchor="middle"
+                                      oryx:textWidth="94">
+                                    <tspan x="50" y="40" dy="4">A</tspan>
+                                </text>
+                                <title>Task</title>
+                            </g>
+                        </g>
+                        <g class="children"/>
+                        <g class="edge"/>
+                    </g>
+                    <g class="controls">
+                        <g class="dockers"/>
+                        <g class="magnets" transform="translate(332.6057872855854, 269.95884472593764)"/>
+                    </g>
+                </g>
+                <g id="svg-sid-CD2F9F12-18DB-45BD-977D-6E312AB0961D">
+                    <g class="stencils" transform="translate(426.4743830474472, 298.9176894518753)">
+                        <g class="me">
+                            <g pointer-events="fill" id="sid-098A0419-A2F0-4E27-8F34-7E83393B85C6"
+                               title="Exit Criterion">
+                                <path d="M 7,0 L 14,10.5 L 7,21 L 0,10.5 Z"
+                                      id="sid-098A0419-A2F0-4E27-8F34-7E83393B85C6bg_frame" fill="black" stroke="black"
+                                      style="stroke-width:1"/>
+                                <title>Exit Criterion</title>
+                            </g>
+                        </g>
+                        <g class="children"/>
+                        <g class="edge"/>
+                    </g>
+                    <g class="controls">
+                        <g class="dockers"/>
+                        <g class="magnets" transform="translate(426.4743830474472, 298.9176894518753)"/>
+                    </g>
+                </g>
+                <g id="svg-sid-18127125-DA74-4226-941E-1B9B458B33D9">
+                    <g class="stencils" transform="translate(525, 269.95884472593764)">
+                        <g class="me">
+                            <g pointer-events="fill" oryx:minimumSize="50 40"
+                               id="sid-69D153D0-FA54-4D9D-AAE9-22DAEBC99694" title="Task">
+                                <defs id="sid-69D153D0-FA54-4D9D-AAE9-22DAEBC99694_sid-69D153D0-FA54-4D9D-AAE9-22DAEBC99694_17">
+                                    <radialGradient id="sid-69D153D0-FA54-4D9D-AAE9-22DAEBC99694background" cx="10%"
+                                                    cy="10%" r="100%" fx="10%" fy="10%">
+                                        <stop offset="0%" stop-color="#ffffff" stop-opacity="1"
+                                              id="sid-69D153D0-FA54-4D9D-AAE9-22DAEBC99694_sid-69D153D0-FA54-4D9D-AAE9-22DAEBC99694_18"/>
+                                        <stop id="sid-69D153D0-FA54-4D9D-AAE9-22DAEBC99694fill_el" offset="100%"
+                                              stop-color="#FFFFCC" stop-opacity="1"/>
+                                    </radialGradient>
+                                </defs>
+                                <rect id="sid-69D153D0-FA54-4D9D-AAE9-22DAEBC99694bg_frame"
+                                      oryx:resize="vertical horizontal" x="0" y="0" width="100" height="80" rx="10"
+                                      ry="10" stroke="#000000" stroke-width="1"
+                                      fill="url(#sid-69D153D0-FA54-4D9D-AAE9-22DAEBC99694background) #ffffcc"/>
+                                <text font-size="12" id="sid-69D153D0-FA54-4D9D-AAE9-22DAEBC99694text_name" x="50"
+                                      y="40" oryx:align="middle center" oryx:fittoelem="text_frame" stroke="none"
+                                      stroke-width="0pt" letter-spacing="-0.01px" fill="#000000"
+                                      transform="rotate(0.001 50 40)" oryx:fontSize="12" text-anchor="middle"
+                                      oryx:textWidth="94">
+                                    <tspan x="50" y="40" dy="4">B</tspan>
+                                </text>
+                                <title>Task</title>
+                            </g>
+                        </g>
+                        <g class="children"/>
+                        <g class="edge"/>
+                    </g>
+                    <g class="controls">
+                        <g class="dockers"/>
+                        <g class="magnets" transform="translate(525, 269.95884472593764)"/>
+                    </g>
+                </g>
+                <g id="svg-sid-AEA61B76-9822-4E91-BC80-0C508EBDCDF7">
+                    <g class="stencils" transform="translate(517.4387998849121, 298.82253170023523)">
+                        <g class="me">
+                            <g pointer-events="fill" id="sid-D178734F-0383-4FFF-8B49-B5DD344BA66D"
+                               title="Entry Criterion">
+                                <path d="M 7,0 L 14,10.5 L 7,21 L 0,10.5 Z"
+                                      id="sid-D178734F-0383-4FFF-8B49-B5DD344BA66Dbg_frame" fill="white" stroke="black"
+                                      style="stroke-width:1"/>
+                                <title>Entry Criterion</title>
+                            </g>
+                        </g>
+                        <g class="children"/>
+                        <g class="edge"/>
+                    </g>
+                    <g class="controls">
+                        <g class="dockers"/>
+                        <g class="magnets" transform="translate(517.4387998849121, 298.82253170023523)"/>
+                    </g>
+                </g>
+            </g>
+            <g class="edge">
+                <g id="svg-sid-0771FF9B-89A6-4964-BE51-42C3C89C102A">
+                    <g class="stencils">
+                        <g class="me">
+                            <g pointer-events="painted">
+                                <path id="sid-42B0BF29-E0B3-4E7B-8662-0B7EB92B37D5bg_frame"
+                                      d="M440.44899904608536 309.91143941427697L517.332205366646 309.83101199763763 "
+                                      stroke="#000000" fill="none" stroke-width="2"
+                                      stroke-dasharray="6, 2, 2, 2, 2, 2"/>
+                            </g>
+                        </g>
+                        <g class="children"/>
+                        <g class="edge"/>
+                    </g>
+                    <g class="controls">
+                        <g class="dockers"/>
+                        <g class="magnets"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

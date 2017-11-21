@@ -1,0 +1,51 @@
+
+//jmeter plugin included like this to exclude ant dependency
+//clashes with shadowjar plugin for solman71connector
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath('net.foragerr.jmeter:jmeter-gradle-plugin:1.0.6-2.13') {
+            exclude group: 'org.apache.ant', module: 'ant'
+        }
+    }
+}
+
+plugins {
+    id 'com.github.jacobono.jaxb' version '1.3.5'
+}
+
+apply plugin: 'maven'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4.1'
+}
+
+task toPom {
+    doLast {
+        pom {
+            project {
+                groupId 'cmmn-xml'
+                artifactId 'cmmn-xml'
+                version '1.0.0'
+                packaging 'pom'
+
+                properties {
+                    'maven.compiler.source' '1.8'
+                    'maven.compiler.target' '1.8'
+                }
+
+                modules {
+                    module 'cmmn-rdf-xml-export'
+                    module 'cmmn-xml-builder'
+                    module 'cmmn-xml-core'
+                    module 'cmmn-xml-export'
+                    module 'cmmn-xml-test'
+                    module 'cmmn-xml-maven-plugin'
+                }
+
+            }
+        }.writeTo("pom.xml")
+    }
+}

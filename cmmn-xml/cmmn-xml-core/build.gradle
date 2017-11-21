@@ -1,0 +1,63 @@
+version '1.0.0'
+
+// https://github.com/stianh/gradle-jaxb-plugin/issues/20
+
+repositories {
+	mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'com.github.jacobono.jaxb'
+apply plugin: 'maven'
+
+jaxb {
+    xsdDir project.name + "/src/main/resources/xsd"
+    bindingsDir project.name + "/src/main/resources/xsd"
+    bindings = ["bindings.xjb"]
+
+    xjc {
+        taskClassname = "org.jvnet.jaxb2_commons.xjc.XJC2Task"
+        args = ["-Xinheritance", "-Xannotate", "-Xfluent-api", "-no-header"]
+    }
+}
+
+dependencies {
+	
+	compile 'com.sun.xml.bind:jaxb-impl:2.2.7-b41'
+
+    testCompile 'org.easytesting:fest-assert:1.4'
+    testCompile 'org.testng:testng:6.9.4'
+    testCompile 'org.assertj:assertj-core:3.5.2'
+
+    jaxb 'com.sun.xml.bind:jaxb-xjc:2.2.7-b41'
+    jaxb 'com.sun.xml.bind:jaxb-impl:2.2.7-b41'
+    jaxb 'javax.xml.bind:jaxb-api:2.2.7'
+    jaxb 'net.java.dev.jaxb2-commons:jaxb-fluent-api:2.1.8'
+    jaxb "org.jvnet.jaxb2_commons:jaxb2-basics-ant:0.6.5"
+    jaxb "org.jvnet.jaxb2_commons:jaxb2-basics:0.6.4"
+    jaxb "org.jvnet.jaxb2_commons:jaxb2-basics-annotate:0.6.4"
+    
+}
+
+task toPom {
+    doLast {
+        pom {
+            project {
+                groupId 'cmmn-xml'
+                artifactId 'cmmn-xml-core'
+                version '1.0.0'
+
+                properties {
+                    'maven.compiler.source' '1.8'
+                    'maven.compiler.target' '1.8'
+                }
+
+            }
+
+        }.writeTo("pom.xml")
+    }
+}
+
+test {
+    useTestNG()
+}

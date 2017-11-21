@@ -1,0 +1,519 @@
+{
+  "resourceId": "canvas",
+  "formats": {},
+  "ssextensions": [],
+  "bounds": {
+    "upperLeft": {
+      "x": 0,
+      "y": 0
+    },
+    "lowerRight": {
+      "x": 1485,
+      "y": 1050
+    }
+  },
+  "stencilset": {
+    "namespace": "http://signavio.com/stencilsets/cmmn-1.0#",
+    "url": "/stencilsets/cmmn-1.0/cmmn-1.0.json?version=11.2.0"
+  },
+  "stencil": {
+    "id": "Case"
+  },
+  "properties": {
+    "orientation": "horizontal",
+    "documentation": ""
+  },
+  "childShapes": [
+    {
+      "outgoing": [
+        {
+          "resourceId": "exit1"
+        }
+      ],
+      "resourceId": "taskA",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 330,
+          "y": 165
+        },
+        "lowerRight": {
+          "x": 430,
+          "y": 245
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Task"
+      },
+      "dockers": [],
+      "properties": {
+        "discretionary": false,
+        "bgcolor": "#FFFFCC",
+        "name": "A",
+        "description": "",
+        "repetition": false,
+        "manualactivation": false,
+        "required": false,
+        "bordercolor": "#000000"
+      },
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "exit2"
+        }
+      ],
+      "resourceId": "taskB",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 330,
+          "y": 300
+        },
+        "lowerRight": {
+          "x": 430,
+          "y": 380
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Task"
+      },
+      "dockers": [],
+      "properties": {
+        "discretionary": false,
+        "bgcolor": "#FFFFCC",
+        "name": "B",
+        "description": "",
+        "repetition": false,
+        "manualactivation": false,
+        "required": false,
+        "bordercolor": "#000000"
+      },
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "entr3"
+        }
+      ],
+      "resourceId": "taskC",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 540,
+          "y": 165
+        },
+        "lowerRight": {
+          "x": 640,
+          "y": 245
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Task"
+      },
+      "dockers": [],
+      "properties": {
+        "discretionary": false,
+        "bgcolor": "#FFFFCC",
+        "name": "C",
+        "description": "",
+        "repetition": false,
+        "manualactivation": false,
+        "required": false,
+        "bordercolor": "#000000"
+      },
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "entr2"
+        },
+        {
+          "resourceId": "entr1"
+        }
+      ],
+      "resourceId": "taskD",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 540,
+          "y": 300
+        },
+        "lowerRight": {
+          "x": 640,
+          "y": 380
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Task"
+      },
+      "dockers": [],
+      "properties": {
+        "discretionary": false,
+        "bgcolor": "#FFFFCC",
+        "name": "D",
+        "description": "",
+        "repetition": false,
+        "manualactivation": false,
+        "required": false,
+        "bordercolor": "#000000"
+      },
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [],
+      "resourceId": "entr3",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 532.5826166550103,
+          "y": 198.58789594689105
+        },
+        "lowerRight": {
+          "x": 546.5826166550103,
+          "y": 219.58789594689105
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "EntryCriterion"
+      },
+      "dockers": [
+        {
+          "x": 13,
+          "y": 43
+        }
+      ],
+      "properties": {},
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [],
+      "resourceId": "entr2",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 533,
+          "y": 300
+        },
+        "lowerRight": {
+          "x": 547,
+          "y": 321
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "EntryCriterion"
+      },
+      "dockers": [
+        {
+          "x": 0,
+          "y": 10.5
+        }
+      ],
+      "properties": {},
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-B140A351-4A4C-44F9-88CC-0CDFFCB62BC9"
+        },
+        {
+          "resourceId": "sid-D27E8ECC-5DAC-46D8-B656-92948FF4196D"
+        }
+      ],
+      "resourceId": "exit1",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 423.8685957618618,
+          "y": 193.95884472593764
+        },
+        "lowerRight": {
+          "x": 437.8685957618618,
+          "y": 214.95884472593764
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "ExitCriterion"
+      },
+      "dockers": [
+        {
+          "x": 97,
+          "y": 39.5
+        }
+      ],
+      "properties": {},
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-C879B022-271A-43F5-9B92-2160EEEAFDAD"
+        },
+        {
+          "resourceId": "sid-7355B8CE-036F-4520-BB39-D9468E7F69DC"
+        }
+      ],
+      "resourceId": "exit2",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 423.9999500037497,
+          "y": 328.9900004999625
+        },
+        "lowerRight": {
+          "x": 437.9999500037497,
+          "y": 349.9900004999625
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "ExitCriterion"
+      },
+      "dockers": [
+        {
+          "x": 100,
+          "y": 39.5
+        }
+      ],
+      "properties": {},
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "entr3"
+        }
+      ],
+      "resourceId": "sid-B140A351-4A4C-44F9-88CC-0CDFFCB62BC9",
+      "formats": {},
+      "dockers": [
+        {
+          "x": 8,
+          "y": 11
+        },
+        {
+          "x": 8,
+          "y": 11
+        }
+      ],
+      "labels": [],
+      "target": {
+        "resourceId": "entr3"
+      },
+      "bounds": {
+        "upperLeft": {
+          "x": 437.9636601906513,
+          "y": 205.2183730296843
+        },
+        "lowerRight": {
+          "x": 531.9395673615376,
+          "y": 209.21987425515334
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Connector"
+      },
+      "properties": {
+        "bordercolor": "#000000"
+      },
+      "childShapes": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "entr2"
+        }
+      ],
+      "resourceId": "sid-D27E8ECC-5DAC-46D8-B656-92948FF4196D",
+      "formats": {},
+      "dockers": [
+        {
+          "x": 8,
+          "y": 11
+        },
+        {
+          "x": 8,
+          "y": 11
+        }
+      ],
+      "labels": [],
+      "target": {
+        "resourceId": "entr2"
+      },
+      "bounds": {
+        "upperLeft": {
+          "x": 435.9961402386107,
+          "y": 208.9695104716513
+        },
+        "lowerRight": {
+          "x": 535.5935718798355,
+          "y": 305.74666446591846
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Connector"
+      },
+      "properties": {
+        "bordercolor": "#000000"
+      },
+      "childShapes": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "entr3"
+        }
+      ],
+      "resourceId": "sid-C879B022-271A-43F5-9B92-2160EEEAFDAD",
+      "formats": {},
+      "dockers": [
+        {
+          "x": 8,
+          "y": 11
+        },
+        {
+          "x": 8,
+          "y": 11
+        }
+      ],
+      "labels": [],
+      "target": {
+        "resourceId": "entr3"
+      },
+      "bounds": {
+        "upperLeft": {
+          "x": 436.0330444463898,
+          "y": 215.45019791239451
+        },
+        "lowerRight": {
+          "x": 535.7012201291573,
+          "y": 335.14646497627996
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Connector"
+      },
+      "properties": {
+        "bordercolor": "#000000"
+      },
+      "childShapes": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "entr1"
+        }
+      ],
+      "resourceId": "sid-7355B8CE-036F-4520-BB39-D9468E7F69DC",
+      "formats": {},
+      "dockers": [
+        {
+          "x": 8,
+          "y": 11
+        },
+        {
+          "x": 8,
+          "y": 11
+        }
+      ],
+      "labels": [],
+      "target": {
+        "resourceId": "entr1"
+      },
+      "bounds": {
+        "upperLeft": {
+          "x": 437.2318062279554,
+          "y": 341.1884095048246
+        },
+        "lowerRight": {
+          "x": 533.1956256042081,
+          "y": 363.16988230397965
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Connector"
+      },
+      "properties": {
+        "bordercolor": "#000000"
+      },
+      "childShapes": []
+    },
+    {
+      "outgoing": [],
+      "resourceId": "entr1",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 532.9817425922058,
+          "y": 353.9533702882549
+        },
+        "lowerRight": {
+          "x": 546.9817425922058,
+          "y": 374.9533702882549
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "EntryCriterion"
+      },
+      "dockers": [
+        {
+          "x": 5,
+          "y": 62
+        }
+      ],
+      "properties": {},
+      "childShapes": [],
+      "labels": []
+    }
+  ]
+}

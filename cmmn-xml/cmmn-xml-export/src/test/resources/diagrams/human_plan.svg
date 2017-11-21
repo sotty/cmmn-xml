@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:oryx="http://oryx-editor.org"
+     id="sid-D6436571-7A7B-4D2A-9792-09918EE4C8FB" width="270" height="255" xmlns:xlink="http://www.w3.org/1999/xlink"
+     oryx:signavioversion="11.2.0">
+    <defs>
+        <marker id="sizeGuide-start" refX="0" refY="5" markerUnits="userSpaceOnUse" markerWidth="6" markerHeight="20"
+                orient="auto">
+            <path d="M 6 2 L 1 5 L 6 8 M 0 0 L 0 20" fill="none" stroke="silver"/>
+        </marker>
+        <marker id="sizeGuide-end" refX="6" refY="5" markerUnits="userSpaceOnUse" markerWidth="6" markerHeight="20"
+                orient="auto">
+            <path d="M 0 2 L 5 5 L 0 8 M 6 0 L 6 20" fill="none" stroke="silver"/>
+        </marker>
+    </defs>
+    <g stroke="black" font-family="'Open Sans', 'Ezra SIL', 'DejaVu Sans', HanaMinA, HanaMinB, sans-serif"
+       font-size-adjust="none" font-style="normal" font-variant="normal" font-weight="normal" line-heigth="normal"
+       font-size="12">
+        <g class="stencils" transform="translate(-230, -155)">
+            <g class="me"/>
+            <g class="children">
+                <g id="svg-sid-1D6A1B03-18E2-40F6-8A63-D38E2F1BA670">
+                    <g class="stencils" transform="translate(255, 305)">
+                        <g class="me">
+                            <g pointer-events="fill" oryx:minimumSize="50 40"
+                               id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056B" title="Blocking Human Task">
+                                <defs id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056B_sid-0EA098E9-1272-4639-B6D6-1B53C76C056B_17">
+                                    <radialGradient id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056Bbackground" cx="10%"
+                                                    cy="10%" r="100%" fx="10%" fy="10%">
+                                        <stop offset="0%" stop-color="#ffffff" stop-opacity="1"
+                                              id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056B_sid-0EA098E9-1272-4639-B6D6-1B53C76C056B_18"/>
+                                        <stop id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056Bfill_el" offset="100%"
+                                              stop-color="#FFFFCC" stop-opacity="1"/>
+                                    </radialGradient>
+                                </defs>
+                                <rect id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056Bbg_frame"
+                                      oryx:resize="vertical horizontal" x="0" y="0" width="100" height="80" rx="10"
+                                      ry="10" stroke="#000000" stroke-width="1"
+                                      fill="url(#sid-0EA098E9-1272-4639-B6D6-1B53C76C056Bbackground) #ffffcc"/>
+                                <text font-size="12" id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056Btext_name" x="50"
+                                      y="40" oryx:align="middle center" oryx:fittoelem="text_frame" stroke="none"
+                                      stroke-width="0pt" letter-spacing="-0.01px" fill="#000000"
+                                      transform="rotate(0.001 50 40)" oryx:fontSize="12" text-anchor="middle"
+                                      style="display: none;"/>
+                                <g id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056BblockingHumanTask"
+                                   transform="scale(0.7,0.7) translate(8,8)">
+                                    <path id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056BhumanTaskpath"
+                                          oryx:anchors="top left" style="opacity:1;fill:#F4F6F7;" stroke="black"
+                                          d="M0.585,24.167h24.083v-7.833c0,0-2.333-3.917-7.083-5.167h-9.25       c-4.417,1.333-7.833,5.75-7.833,5.75L0.585,24.167z"/>
+                                    <path id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056BhumanTaskpath2"
+                                          oryx:anchors="top left" style="opacity:1;fill:none;" stroke="black"
+                                          d="M 6 20 L 6 24"/>
+                                    <path id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056BhumanTaskpath3"
+                                          oryx:anchors="top left" style="opacity:1;fill:none;" stroke="black"
+                                          d="M 20 20 L 20 24"/>
+                                    <circle id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056BhumanTaskcircle"
+                                            oryx:anchors="top left" fill="#000000" stroke="black" cx="13.002" cy="5.916"
+                                            r="5.417"/>
+                                    <path id="sid-0EA098E9-1272-4639-B6D6-1B53C76C056BhumanTaskpath4"
+                                          oryx:anchors="top left" style="opacity:1;fill:#F0EFF0;" stroke="black"
+                                          d="M8.043,7.083c0,0,2.814-2.426,5.376-1.807s4.624-0.693,4.624-0.693       c0.25,1.688,0.042,3.75-1.458,5.584c0,0,1.083,0.75,1.083,1.5s0.125,1.875-1,3s-5.5,1.25-6.75,0S8.668,12.834,8.668,12       s0.583-1.25,1.25-1.917C8.835,9.5,7.419,7.708,8.043,7.083z"/>
+                                </g>
+                                <title>Blocking Human Task</title>
+                            </g>
+                        </g>
+                        <g class="children"/>
+                        <g class="edge"/>
+                    </g>
+                    <g class="controls">
+                        <g class="dockers"/>
+                        <g class="magnets" transform="translate(255, 305)"/>
+                    </g>
+                </g>
+                <g id="svg-sid-DAF79A3B-1BB3-437D-9A1B-D6D2B49515D6">
+                    <g class="stencils" transform="translate(375, 180)">
+                        <g class="me">
+                            <g pointer-events="fill" oryx:minimumSize="50 40"
+                               id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24" title="Decision Task">
+                                <defs id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24_sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24_17">
+                                    <radialGradient id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24background" cx="10%"
+                                                    cy="10%" r="100%" fx="10%" fy="10%">
+                                        <stop offset="0%" stop-color="#ffffff" stop-opacity="1"
+                                              id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24_sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24_18"/>
+                                        <stop id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24fill_el" offset="100%"
+                                              stop-color="#FFFFCC" stop-opacity="1"/>
+                                    </radialGradient>
+                                </defs>
+                                <rect id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24bg_frame"
+                                      oryx:resize="vertical horizontal" x="0" y="0" width="100" height="80" rx="10"
+                                      ry="10" stroke="#000000" stroke-width="1"
+                                      fill="url(#sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24background) #ffffcc"/>
+                                <rect id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24discretionary_frame"
+                                      oryx:resize="vertical horizontal" x="0" y="0" width="100" height="80" rx="10"
+                                      ry="10" stroke="white" stroke-width="2" fill="none" display="inherit"/>
+                                <rect id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24discretionary"
+                                      oryx:resize="vertical horizontal" x="0" y="0" width="100" height="80" rx="10"
+                                      ry="10" stroke="black" stroke-width="1" style="stroke-dasharray: 5.5, 3"
+                                      fill="url(#sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24background) #ffffcc"
+                                      display="inherit"/>
+                                <text font-size="12" id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24text_name" x="50"
+                                      y="40" oryx:align="middle center" oryx:fittoelem="text_frame" stroke="none"
+                                      stroke-width="0pt" letter-spacing="-0.01px" fill="#000000"
+                                      transform="rotate(0.001 50 40)" oryx:fontSize="12" text-anchor="middle"
+                                      style="display: none;"/>
+                                <g id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24decisionSymbol"
+                                   transform="scale(0.7,0.7) translate(10,13)">
+                                    <a id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24decisionTask" target="_blank"
+                                       xlink:href="">
+                                        <rect oryx:anchors="top left" id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24top"
+                                              x="0" y="0" width="22" height="4"
+                                              style="opacity:1;fill:#B3B1B3;fill-opacity:1;" stroke="black"/>
+                                        <rect oryx:anchors="top left" id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24rect"
+                                              x="0" y="4" style="opacity:1;fill:none;" stroke="black" width="22"
+                                              height="12"/>
+                                        <path oryx:anchors="top left" id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24row"
+                                              style="opacity:1;fill:none;" stroke="black" d="M 0 10 L 22 10"/>
+                                        <path oryx:anchors="top left" id="sid-EE2E59F9-64C8-427F-B9A3-E12E1107EA24col"
+                                              style="opacity:1; fill:none;" stroke="black" d="M 7 4 L 7 16"/>
+                                    </a>
+                                </g>
+                                <title>Decision Task</title>
+                            </g>
+                        </g>
+                        <g class="children"/>
+                        <g class="edge"/>
+                    </g>
+                    <g class="controls">
+                        <g class="dockers"/>
+                        <g class="magnets" transform="translate(375, 180)"/>
+                    </g>
+                </g>
+            </g>
+            <g class="edge">
+                <g id="svg-sid-A7D037BE-D68A-43E3-BBDD-FB39D82E8AD1">
+                    <g class="stencils">
+                        <g class="me">
+                            <g pointer-events="painted">
+                                <path id="sid-F1D7463D-AC8D-4B51-9EA3-90250820A908bg_frame"
+                                      d="M354.58816370775867 310.94597908705515L381.20871129224133 261.08527091294485 "
+                                      stroke="#000000" fill="none" stroke-width="2" stroke-dasharray="4, 5"/>
+                            </g>
+                        </g>
+                        <g class="children"/>
+                        <g class="edge"/>
+                    </g>
+                    <g class="controls">
+                        <g class="dockers"/>
+                        <g class="magnets"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

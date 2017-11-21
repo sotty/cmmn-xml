@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:admin="http://webns.net/mvcb/"
+>
+    <rdf:Description rdf:about="">
+        <admin:generatorAgent rdf:resource="http://purl.org/NET/erdf/extract"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#sid-2BC726E8-0661-47E9-91BA-036AABE94C84">
+        <type xmlns="http://oryx-editor.org/">Task</type>
+        <bounds xmlns="http://oryx-editor.org/">400,275,300,195</bounds>
+        <discretionary xmlns="http://oryx-editor.org/">false</discretionary>
+        <bgcolor xmlns="http://oryx-editor.org/">#FFFFCC</bgcolor>
+        <name xmlns="http://oryx-editor.org/">A</name>
+        <description xmlns="http://oryx-editor.org/"/>
+        <repetition xmlns="http://oryx-editor.org/">true</repetition>
+        <manualactivation xmlns="http://oryx-editor.org/">false</manualactivation>
+        <required xmlns="http://oryx-editor.org/">false</required>
+        <bordercolor xmlns="http://oryx-editor.org/">#000000</bordercolor>
+        <docker xmlns="http://oryx-editor.org/">#</docker>
+        <parent xmlns="http://raziel.org/" rdf:resource="#canvas"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#canvas">
+        <rdf:type rdf:resource="http://oryx-editor.org/canvas"/>
+        <type xmlns="http://oryx-editor.org/">Case</type>
+        <bounds xmlns="http://oryx-editor.org/">1485,1050,0,0</bounds>
+        <orientation xmlns="http://oryx-editor.org/">horizontal</orientation>
+        <documentation xmlns="http://oryx-editor.org/"/>
+        <render xmlns="http://oryx-editor.org/" rdf:resource="#sid-2BC726E8-0661-47E9-91BA-036AABE94C84"/>
+        <stencilset xmlns="http://oryx-editor.org/" rdf:resource="/stencilsets/cmmn-1.0/cmmn-1.0.json?version=11.2.0"/>
+    </rdf:Description>
+</rdf:RDF>
+

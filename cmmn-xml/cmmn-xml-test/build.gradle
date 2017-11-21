@@ -1,0 +1,39 @@
+version '1.0.0'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':cmmn-xml-builder')
+
+    compile 'org.easytesting:fest-assert:1.4'
+    compile 'org.testng:testng:6.9.4'
+    compile 'org.assertj:assertj-core:3.5.2'
+}
+
+task toPom {
+    doLast {
+        pom {
+            project {
+                groupId 'cmmn-xml'
+                artifactId 'cmmn-xml-test'
+                version '1.0.0'
+
+                properties {
+                    'maven.compiler.source' '1.8'
+                    'maven.compiler.target' '1.8'
+                }
+
+            }
+
+        }.writeTo("pom.xml")
+    }
+}
+
+test {
+    useTestNG()
+}
