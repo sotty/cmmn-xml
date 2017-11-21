@@ -1,4 +1,5 @@
 src/test/resources/signavio/*.json
+out/*
 
 ### Gradle template
 .gradle
