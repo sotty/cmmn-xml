@@ -1,0 +1,230 @@
+{
+  "resourceId": "canvas",
+  "ssextensions": [],
+  "bounds": {
+    "upperLeft": {
+      "x": 0,
+      "y": 0
+    },
+    "lowerRight": {
+      "x": 1485,
+      "y": 1050
+    }
+  },
+  "stencilset": {
+    "namespace": "http://signavio.com/stencilsets/cmmn-1.0#",
+    "url": "/stencilsets/cmmn-1.0/cmmn-1.0.json?version=11.2.0"
+  },
+  "stencil": {
+    "id": "Case"
+  },
+  "properties": {
+    "orientation": "horizontal"
+  },
+  "childShapes": [
+    {
+      "outgoing": [],
+      "resourceId": "sid-7CDFD2A1-4A02-48F2-8D11-96CC5BE3C545",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 270,
+          "y": 165
+        },
+        "lowerRight": {
+          "x": 991,
+          "y": 527
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "StageExpanded"
+      },
+      "dockers": [],
+      "properties": {
+        "discretionary": false,
+        "autocomplete": false,
+        "name": "Outer",
+        "description": "",
+        "repetition": false,
+        "manualactivation": false,
+        "required": false
+      },
+      "childShapes": [
+        {
+          "outgoing": [],
+          "resourceId": "sid-FF16B968-BED6-41FE-8071-34664BABB028",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 105,
+              "y": 75
+            },
+            "lowerRight": {
+              "x": 305,
+              "y": 235
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "StageExpanded"
+          },
+          "dockers": [],
+          "properties": {
+            "discretionary": false,
+            "autocomplete": false,
+            "name": "Inner1",
+            "description": "",
+            "repetition": false,
+            "manualactivation": false,
+            "required": false
+          },
+          "childShapes": [
+            {
+              "outgoing": [],
+              "resourceId": "sid-79E2453B-55B7-4AF1-9F23-2152BC9FED62",
+              "formats": {},
+              "bounds": {
+                "upperLeft": {
+                  "x": 50,
+                  "y": 40
+                },
+                "lowerRight": {
+                  "x": 150,
+                  "y": 120
+                }
+              },
+              "layers": [],
+              "glossaryLinks": {},
+              "labelDirtyStates": {},
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "discretionary": false,
+                "bgcolor": "#FFFFCC",
+                "name": "A",
+                "description": "",
+                "repetition": false,
+                "manualactivation": false,
+                "required": false,
+                "bordercolor": "#000000"
+              },
+              "childShapes": [],
+              "labels": []
+            }
+          ],
+          "labels": []
+        },
+        {
+          "outgoing": [],
+          "resourceId": "sid-673E18FB-0D0B-4EE9-AE57-F57FE8BABDD1",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 435,
+              "y": 135
+            },
+            "lowerRight": {
+              "x": 635,
+              "y": 295
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "StageExpanded"
+          },
+          "dockers": [],
+          "properties": {
+            "discretionary": false,
+            "autocomplete": false,
+            "name": "Inner2",
+            "description": "",
+            "repetition": false,
+            "manualactivation": false,
+            "required": false
+          },
+          "childShapes": [
+            {
+              "outgoing": [],
+              "resourceId": "sid-198D764E-28BE-4B6D-BD98-0F62C4A90EBA",
+              "formats": {},
+              "bounds": {
+                "upperLeft": {
+                  "x": 50,
+                  "y": 40
+                },
+                "lowerRight": {
+                  "x": 150,
+                  "y": 120
+                }
+              },
+              "layers": [],
+              "glossaryLinks": {},
+              "labelDirtyStates": {},
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "discretionary": false,
+                "bgcolor": "#FFFFCC",
+                "name": "B",
+                "description": "",
+                "repetition": false,
+                "manualactivation": false,
+                "required": false,
+                "bordercolor": "#000000"
+              },
+              "childShapes": [],
+              "labels": []
+            }
+          ],
+          "labels": []
+        },
+        {
+          "outgoing": [],
+          "resourceId": "sid-A0B7CE31-A13F-4556-B211-D6DDC277DC8B",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 270,
+              "y": 255
+            },
+            "lowerRight": {
+              "x": 370,
+              "y": 335
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "Task"
+          },
+          "dockers": [],
+          "properties": {
+            "discretionary": false,
+            "bgcolor": "#FFFFCC",
+            "name": "C",
+            "description": "",
+            "repetition": false,
+            "manualactivation": false,
+            "required": false,
+            "bordercolor": "#000000"
+          },
+          "childShapes": [],
+          "labels": []
+        }
+      ],
+      "labels": []
+    }
+  ]
+}

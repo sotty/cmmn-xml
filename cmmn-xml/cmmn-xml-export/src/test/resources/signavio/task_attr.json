@@ -1,0 +1,62 @@
+{
+  "resourceId": "canvas",
+  "formats": {},
+  "ssextensions": [],
+  "bounds": {
+    "upperLeft": {
+      "x": 0,
+      "y": 0
+    },
+    "lowerRight": {
+      "x": 1485,
+      "y": 1050
+    }
+  },
+  "stencilset": {
+    "namespace": "http://signavio.com/stencilsets/cmmn-1.0#",
+    "url": "/stencilsets/cmmn-1.0/cmmn-1.0.json?version=11.2.0"
+  },
+  "stencil": {
+    "id": "Case"
+  },
+  "properties": {
+    "orientation": "horizontal",
+    "documentation": ""
+  },
+  "childShapes": [
+    {
+      "outgoing": [],
+      "resourceId": "sid-task",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 345,
+          "y": 240
+        },
+        "lowerRight": {
+          "x": 445,
+          "y": 320
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Task"
+      },
+      "dockers": [],
+      "properties": {
+        "discretionary": true,
+        "bgcolor": "#FFFFCC",
+        "name": "A",
+        "description": "",
+        "repetition": true,
+        "manualactivation": true,
+        "required": true,
+        "bordercolor": "#000000"
+      },
+      "childShapes": [],
+      "labels": []
+    }
+  ]
+}

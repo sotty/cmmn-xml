@@ -1,0 +1,99 @@
+{
+  "resourceId": "canvas",
+  "ssextensions": [],
+  "offset": {
+    "x": 1.179868758072189E-5,
+    "y": 1.6133428175635345E-6
+  },
+  "bounds": {
+    "upperLeft": {
+      "x": 0,
+      "y": 0
+    },
+    "lowerRight": {
+      "x": 1485,
+      "y": 1050
+    }
+  },
+  "stencilset": {
+    "namespace": "http://signavio.com/stencilsets/cmmn-1.0#",
+    "url": "/stencilsets/cmmn-1.0/cmmn-1.0.json?version=11.2.0"
+  },
+  "stencil": {
+    "id": "Case"
+  },
+  "properties": {
+    "orientation": "horizontal",
+    "documentation": ""
+  },
+  "childShapes": [
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-2DD446FA-4561-4914-8F2B-F953B02B6665"
+        }
+      ],
+      "resourceId": "sid-0A6E447C-7295-4862-BA5D-1C513B9E4654",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 480,
+          "y": 238.1483628193975
+        },
+        "lowerRight": {
+          "x": 580,
+          "y": 318.1483628193975
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Task"
+      },
+      "dockers": [],
+      "properties": {
+        "discretionary": false,
+        "bgcolor": "#FFFFCC",
+        "name": "b",
+        "description": "",
+        "repetition": false,
+        "manualactivation": false,
+        "required": false,
+        "bordercolor": "#000000"
+      },
+      "childShapes": [],
+      "labels": []
+    },
+    {
+      "outgoing": [],
+      "resourceId": "sid-2DD446FA-4561-4914-8F2B-F953B02B6665",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 472.43980061704696,
+          "y": 265.296725638795
+        },
+        "lowerRight": {
+          "x": 486.43980061704696,
+          "y": 286.296725638795
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "EntryCriterion"
+      },
+      "dockers": [
+        {
+          "x": 7,
+          "y": 38
+        }
+      ],
+      "properties": {},
+      "childShapes": [],
+      "labels": []
+    }
+  ]
+}

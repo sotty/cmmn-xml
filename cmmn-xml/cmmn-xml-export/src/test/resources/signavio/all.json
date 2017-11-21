@@ -1,0 +1,987 @@
+{
+  "resourceId": "canvas",
+  "formats": {},
+  "ssextensions": [],
+  "bounds": {
+    "upperLeft": {
+      "x": 0,
+      "y": 0
+    },
+    "lowerRight": {
+      "x": 1485,
+      "y": 1050
+    }
+  },
+  "stencilset": {
+    "namespace": "http://signavio.com/stencilsets/cmmn-1.0#",
+    "url": "/stencilsets/cmmn-1.0/cmmn-1.0.json?version=10.15.0"
+  },
+  "stencil": {
+    "id": "Case"
+  },
+  "properties": {
+    "orientation": "horizontal",
+    "documentation": ""
+  },
+  "childShapes": [
+    {
+      "outgoing": [],
+      "resourceId": "sid-78F5A3BC-22E9-4AE6-9CB3-98802903592E",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 90,
+          "y": 75
+        },
+        "lowerRight": {
+          "x": 933,
+          "y": 715
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "CasePlanModel"
+      },
+      "dockers": [],
+      "properties": {
+        "autocomplete": true,
+        "name": "My Case Plan Model Name",
+        "description": "My Case Plan Model Description"
+      },
+      "childShapes": [
+        {
+          "outgoing": [],
+          "resourceId": "sid-EFE5F563-500F-4AE5-BBEB-9C7A6A5E2D29",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 40,
+              "y": 119
+            },
+            "lowerRight": {
+              "x": 140,
+              "y": 199
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "NBHumanTask"
+          },
+          "dockers": [],
+          "properties": {
+            "discretionary": true,
+            "bgcolor": "#FFFFCC",
+            "name": "My Non Blocking HT",
+            "description": "Description for Non Blocking Human Task",
+            "repetition": true,
+            "manualactivation": true,
+            "required": true,
+            "bordercolor": "#000000"
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [
+            {
+              "resourceId": "sid-353714CD-5CB9-4D3C-9C6A-46278F277485"
+            },
+            {
+              "resourceId": "sid-9BB1A29E-20FF-4407-A6C3-4E3CB477EFB9"
+            },
+            {
+              "resourceId": "sid-46F77825-6FB9-4814-8F9B-99B8B6883CC1"
+            }
+          ],
+          "resourceId": "sid-60EB7817-21FE-42AC-A596-43F377D7A7F6",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 346,
+              "y": 234
+            },
+            "lowerRight": {
+              "x": 446,
+              "y": 314
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "Task"
+          },
+          "dockers": [],
+          "properties": {
+            "discretionary": true,
+            "bgcolor": "#FFFFCC",
+            "name": "My task",
+            "description": "My task descr",
+            "repetition": true,
+            "manualactivation": true,
+            "required": true,
+            "bordercolor": "#000000"
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [
+            {
+              "resourceId": "sid-E69B1891-FE1A-43F2-B24A-5361A9E4FD44"
+            }
+          ],
+          "resourceId": "sid-4896ED26-B0DC-4A5D-994A-F1316057766A",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 555,
+              "y": 60
+            },
+            "lowerRight": {
+              "x": 757,
+              "y": 238
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "CasePlanModel"
+          },
+          "dockers": [],
+          "properties": {
+            "autocomplete": false,
+            "name": "My Nested Case Plan Model",
+            "description": ""
+          },
+          "childShapes": [
+            {
+              "outgoing": [],
+              "resourceId": "sid-63B4B3BA-0799-483D-BD18-A5D9AA50D565",
+              "formats": {},
+              "bounds": {
+                "upperLeft": {
+                  "x": 51,
+                  "y": 49
+                },
+                "lowerRight": {
+                  "x": 151,
+                  "y": 129
+                }
+              },
+              "layers": [],
+              "glossaryLinks": {},
+              "labelDirtyStates": {},
+              "stencil": {
+                "id": "DecisionTask"
+              },
+              "dockers": [],
+              "properties": {
+                "discretionary": true,
+                "entry": "/model/aae6d86c02fc40e8a6bf07598097b475",
+                "bgcolor": "#FFFFCC",
+                "name": "My decision task\n",
+                "description": "My decision task descr",
+                "repetition": true,
+                "manualactivation": true,
+                "required": true,
+                "bordercolor": "#000000"
+              },
+              "childShapes": [],
+              "labels": []
+            }
+          ],
+          "labels": []
+        },
+        {
+          "outgoing": [],
+          "resourceId": "sid-AECEC978-D447-4C9E-A34D-8F245E44C313",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 98.68201576927413,
+              "y": 233
+            },
+            "lowerRight": {
+              "x": 228.68201576927413,
+              "y": 315
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "StageCollapsed"
+          },
+          "dockers": [],
+          "properties": {
+            "discretionary": true,
+            "entry": "/model/eba3c9b9f13d45a7b1aec4484ecc6b3d",
+            "bgcolor": "#FFFFCC",
+            "autocomplete": true,
+            "name": "My Collapsed Stage\n",
+            "description": "My collapsed stage descr",
+            "repetition": true,
+            "manualactivation": true,
+            "required": true,
+            "bordercolor": "#000000"
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [
+            {
+              "resourceId": "sid-1D4BC7F3-4C61-490F-891E-DEB3F2CAD947"
+            }
+          ],
+          "resourceId": "sid-E8D77967-A048-4692-B715-B5401E68181F",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 40,
+              "y": 349
+            },
+            "lowerRight": {
+              "x": 240,
+              "y": 509
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "StageExpanded"
+          },
+          "dockers": [],
+          "properties": {
+            "discretionary": true,
+            "autocomplete": true,
+            "name": "My Expanded Stage name\n",
+            "description": "my expanded stage description",
+            "repetition": true,
+            "manualactivation": true,
+            "required": true
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [
+            {
+              "resourceId": "sid-1D6CD6B9-D239-4EAE-AD8E-80E140A7BEC5"
+            }
+          ],
+          "resourceId": "sid-353714CD-5CB9-4D3C-9C6A-46278F277485",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 337.50795405605237,
+              "y": 267.7034323219549
+            },
+            "lowerRight": {
+              "x": 351.50795405605237,
+              "y": 288.7034323219549
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "EntryCriterion"
+          },
+          "dockers": [
+            {
+              "x": 1,
+              "y": 44
+            }
+          ],
+          "properties": {},
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [
+            {
+              "resourceId": "sid-B06CFCC6-6F4F-4907-A997-0B5A3C81425A"
+            }
+          ],
+          "resourceId": "sid-9BB1A29E-20FF-4407-A6C3-4E3CB477EFB9",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 440.75952512863375,
+              "y": 267.78817020382166
+            },
+            "lowerRight": {
+              "x": 454.75952512863375,
+              "y": 288.78817020382166
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "ExitCriterion"
+          },
+          "dockers": [
+            {
+              "x": 100,
+              "y": 44.14239716570492
+            }
+          ],
+          "properties": {},
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [],
+          "resourceId": "sid-360ED3BB-CAD8-4688-B33C-16D1D1502CFB",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 197,
+              "y": 129
+            },
+            "lowerRight": {
+              "x": 327,
+              "y": 189
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "Milestone"
+          },
+          "dockers": [],
+          "properties": {
+            "bgcolor": "#FFFFCC",
+            "name": "My milestone",
+            "description": "Milestone Description",
+            "repetition": true,
+            "required": true,
+            "bordercolor": "#000000"
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [],
+          "resourceId": "sid-26E954BD-3406-4425-92A3-7D90A4513F11",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 285,
+              "y": 378
+            },
+            "lowerRight": {
+              "x": 315,
+              "y": 408
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "EventListener"
+          },
+          "dockers": [
+            {
+              "x": 300,
+              "y": 393
+            }
+          ],
+          "properties": {
+            "name": "My Event Listener\n",
+            "description": "My event listener descr"
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [],
+          "resourceId": "sid-683B573A-5561-4EE8-8834-74556ED0CEE0",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 335,
+              "y": 453
+            },
+            "lowerRight": {
+              "x": 365,
+              "y": 483
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "TimerEventListener"
+          },
+          "dockers": [
+            {
+              "x": 350,
+              "y": 468
+            }
+          ],
+          "properties": {
+            "name": "My timer event listener",
+            "description": ""
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [
+            {
+              "resourceId": "sid-4D85CEBD-34E0-48A9-93C6-74AE68D61077"
+            }
+          ],
+          "resourceId": "sid-9DD2CCA9-72B8-456C-8F8F-F1E32143F52E",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 284.99999999999994,
+              "y": 308
+            },
+            "lowerRight": {
+              "x": 315.49799999999993,
+              "y": 338.50100000000003
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "UserEventListener"
+          },
+          "dockers": [
+            {
+              "x": 300.2489999999999,
+              "y": 323.2505
+            }
+          ],
+          "properties": {
+            "name": "My User Event Listener",
+            "description": ""
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [
+            {
+              "resourceId": "sid-DEFF98C8-1F76-47B6-9291-D2AFC3754E72"
+            }
+          ],
+          "resourceId": "sid-AC4D7AA2-DA76-4798-AC61-FA559DA57519",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 454,
+              "y": 453
+            },
+            "lowerRight": {
+              "x": 542,
+              "y": 550
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "CaseFileItem"
+          },
+          "dockers": [],
+          "properties": {
+            "name": "My case file item\n",
+            "description": "My case file item descr"
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [
+            {
+              "resourceId": "sid-B8ED3840-4965-4D39-AC60-ACF2E4FA4E0D"
+            }
+          ],
+          "resourceId": "sid-9044BFAA-DE10-4BFC-93E5-D4F586D6A894",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 498,
+              "y": 280
+            },
+            "lowerRight": {
+              "x": 598,
+              "y": 360
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "ProcessTask"
+          },
+          "dockers": [],
+          "properties": {
+            "discretionary": false,
+            "entry": "",
+            "bgcolor": "#FFFFCC",
+            "name": "My process task",
+            "description": "",
+            "repetition": false,
+            "manualactivation": false,
+            "required": false,
+            "bordercolor": "#000000"
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [],
+          "resourceId": "sid-03962ED6-AC01-48A0-A17F-7EC799336802",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 643,
+              "y": 283
+            },
+            "lowerRight": {
+              "x": 743,
+              "y": 363
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "PlanFragmentCollapsed"
+          },
+          "dockers": [],
+          "properties": {
+            "entry": "/model/eba3c9b9f13d45a7b1aec4484ecc6b3d",
+            "name": "My collapsed plan fragment\n",
+            "description": ""
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [],
+          "resourceId": "sid-8FA4436F-B11F-4067-A0F4-F30CBE8F78AE",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 593,
+              "y": 388
+            },
+            "lowerRight": {
+              "x": 793,
+              "y": 548
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "PlanFragmentExpanded"
+          },
+          "dockers": [],
+          "properties": {
+            "name": "My expanded plan fragment",
+            "description": ""
+          },
+          "childShapes": [
+            {
+              "outgoing": [],
+              "resourceId": "sid-FD025172-3C8B-4EB3-9DC3-21B0B04CB0FD",
+              "formats": {},
+              "bounds": {
+                "upperLeft": {
+                  "x": 50,
+                  "y": 40
+                },
+                "lowerRight": {
+                  "x": 150,
+                  "y": 120
+                }
+              },
+              "layers": [],
+              "glossaryLinks": {},
+              "labelDirtyStates": {},
+              "stencil": {
+                "id": "Task"
+              },
+              "dockers": [],
+              "properties": {
+                "discretionary": true,
+                "bgcolor": "#FFFFCC",
+                "name": "Inner Task",
+                "description": "",
+                "repetition": false,
+                "manualactivation": false,
+                "required": false,
+                "bordercolor": "#000000"
+              },
+              "childShapes": [],
+              "labels": []
+            }
+          ],
+          "labels": []
+        },
+        {
+          "outgoing": [],
+          "resourceId": "sid-1D4BC7F3-4C61-490F-891E-DEB3F2CAD947",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 25.68201576927413,
+              "y": 402.4640685333968
+            },
+            "lowerRight": {
+              "x": 53.68201576927413,
+              "y": 422.4640685333968
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "PlanningTable"
+          },
+          "dockers": [
+            {
+              "x": 9,
+              "y": 65
+            }
+          ],
+          "properties": {
+            "collapsed": true,
+            "name": "My plan table",
+            "description": ""
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [],
+          "resourceId": "sid-B8ED3840-4965-4D39-AC60-ACF2E4FA4E0D",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 491,
+              "y": 309
+            },
+            "lowerRight": {
+              "x": 505,
+              "y": 330
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "EntryCriterion"
+          },
+          "dockers": [
+            {
+              "x": 0,
+              "y": 39.5
+            }
+          ],
+          "properties": {},
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [
+            {
+              "resourceId": "sid-937B798E-59A4-4CBF-B5B1-99E69E71EB5F"
+            }
+          ],
+          "resourceId": "sid-46F77825-6FB9-4814-8F9B-99B8B6883CC1",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 389,
+              "y": 223.5
+            },
+            "lowerRight": {
+              "x": 403,
+              "y": 244.5
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "EntryCriterion"
+          },
+          "dockers": [
+            {
+              "x": 50,
+              "y": 0
+            }
+          ],
+          "properties": {},
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [],
+          "resourceId": "sid-E69B1891-FE1A-43F2-B24A-5361A9E4FD44",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 548,
+              "y": 98
+            },
+            "lowerRight": {
+              "x": 562,
+              "y": 119
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "ExitCriterion"
+          },
+          "dockers": [
+            {
+              "x": 0,
+              "y": 48.5
+            }
+          ],
+          "properties": {},
+          "childShapes": [],
+          "labels": []
+        }
+      ],
+      "labels": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-360ED3BB-CAD8-4688-B33C-16D1D1502CFB"
+        }
+      ],
+      "resourceId": "sid-1D6CD6B9-D239-4EAE-AD8E-80E140A7BEC5",
+      "formats": {},
+      "dockers": [
+        {
+          "x": 8,
+          "y": 11
+        },
+        {
+          "x": 65,
+          "y": 30
+        }
+      ],
+      "labels": [],
+      "target": {
+        "resourceId": "sid-360ED3BB-CAD8-4688-B33C-16D1D1502CFB"
+      },
+      "bounds": {
+        "upperLeft": {
+          "x": 373.449142143861,
+          "y": 264.7460045453667
+        },
+        "lowerRight": {
+          "x": 431.021365079827,
+          "y": 347.27218746698526
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Connector"
+      },
+      "properties": {
+        "bordercolor": "#000000"
+      },
+      "childShapes": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-B8ED3840-4965-4D39-AC60-ACF2E4FA4E0D"
+        }
+      ],
+      "resourceId": "sid-B06CFCC6-6F4F-4907-A997-0B5A3C81425A",
+      "formats": {},
+      "dockers": [
+        {
+          "x": 8,
+          "y": 11
+        },
+        {
+          "x": 8,
+          "y": 11
+        }
+      ],
+      "labels": [],
+      "target": {
+        "resourceId": "sid-B8ED3840-4965-4D39-AC60-ACF2E4FA4E0D"
+      },
+      "bounds": {
+        "upperLeft": {
+          "x": 542.6727121177552,
+          "y": 356.99812386308156
+        },
+        "lowerRight": {
+          "x": 583.5167981711483,
+          "y": 390.5021766596095
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Connector"
+      },
+      "properties": {
+        "bordercolor": "#000000"
+      },
+      "childShapes": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-60EB7817-21FE-42AC-A596-43F377D7A7F6"
+        }
+      ],
+      "resourceId": "sid-4D85CEBD-34E0-48A9-93C6-74AE68D61077",
+      "formats": {},
+      "dockers": [
+        {
+          "x": 15.497999999999994,
+          "y": 15.501000000000015
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "labels": [],
+      "target": {
+        "resourceId": "sid-60EB7817-21FE-42AC-A596-43F377D7A7F6"
+      },
+      "bounds": {
+        "upperLeft": {
+          "x": 404.0696843878943,
+          "y": 375.75758746048024
+        },
+        "lowerRight": {
+          "x": 434.37673748710563,
+          "y": 391.4664672270198
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Connector"
+      },
+      "properties": {
+        "bordercolor": "#000000"
+      },
+      "childShapes": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-E69B1891-FE1A-43F2-B24A-5361A9E4FD44"
+        }
+      ],
+      "resourceId": "sid-937B798E-59A4-4CBF-B5B1-99E69E71EB5F",
+      "formats": {},
+      "dockers": [
+        {
+          "x": 8,
+          "y": 11
+        },
+        {
+          "x": 8,
+          "y": 11
+        }
+      ],
+      "labels": [],
+      "target": {
+        "resourceId": "sid-E69B1891-FE1A-43F2-B24A-5361A9E4FD44"
+      },
+      "bounds": {
+        "upperLeft": {
+          "x": 491.5115084453304,
+          "y": 188.5414392524463
+        },
+        "lowerRight": {
+          "x": 640.2463040546696,
+          "y": 305.9390294975537
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Connector"
+      },
+      "properties": {
+        "bordercolor": "#000000"
+      },
+      "childShapes": []
+    },
+    {
+      "outgoing": [
+        {
+          "resourceId": "sid-9044BFAA-DE10-4BFC-93E5-D4F586D6A894"
+        }
+      ],
+      "resourceId": "sid-DEFF98C8-1F76-47B6-9291-D2AFC3754E72",
+      "formats": {},
+      "dockers": [
+        {
+          "x": 44,
+          "y": 48.5
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "labels": [],
+      "target": {
+        "resourceId": "sid-9044BFAA-DE10-4BFC-93E5-D4F586D6A894"
+      },
+      "bounds": {
+        "upperLeft": {
+          "x": 601.5468385586404,
+          "y": 435.66721146786443
+        },
+        "lowerRight": {
+          "x": 626.7969114413596,
+          "y": 527.3249760321355
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "Connector"
+      },
+      "properties": {
+        "bordercolor": "#000000"
+      },
+      "childShapes": []
+    }
+  ]
+}

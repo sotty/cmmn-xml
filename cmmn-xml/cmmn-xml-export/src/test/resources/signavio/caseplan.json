@@ -1,0 +1,151 @@
+{
+  "resourceId": "canvas",
+  "formats": {},
+  "ssextensions": [],
+  "bounds": {
+    "upperLeft": {
+      "x": 0,
+      "y": 0
+    },
+    "lowerRight": {
+      "x": 1485,
+      "y": 1050
+    }
+  },
+  "stencilset": {
+    "namespace": "http://signavio.com/stencilsets/cmmn-1.0#",
+    "url": "/stencilsets/cmmn-1.0/cmmn-1.0.json?version=11.2.0"
+  },
+  "stencil": {
+    "id": "Case"
+  },
+  "properties": {
+    "orientation": "horizontal",
+    "documentation": ""
+  },
+  "childShapes": [
+    {
+      "outgoing": [],
+      "resourceId": "sid-D43AE1CC-9466-4BCB-BDC8-1B37CE912FE6",
+      "formats": {},
+      "bounds": {
+        "upperLeft": {
+          "x": 300,
+          "y": 180
+        },
+        "lowerRight": {
+          "x": 902,
+          "y": 513
+        }
+      },
+      "layers": [],
+      "glossaryLinks": {},
+      "labelDirtyStates": {},
+      "stencil": {
+        "id": "CasePlanModel"
+      },
+      "dockers": [],
+      "properties": {
+        "autocomplete": true,
+        "name": "MasterPlan",
+        "description": "Descr"
+      },
+      "childShapes": [
+        {
+          "outgoing": [],
+          "resourceId": "sid-3DE2F9A6-655D-4A62-824D-F0033DB23CD1",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 75,
+              "y": 75
+            },
+            "lowerRight": {
+              "x": 175,
+              "y": 155
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "Task"
+          },
+          "dockers": [],
+          "properties": {
+            "discretionary": false,
+            "bgcolor": "#FFFFCC",
+            "name": "A",
+            "description": "",
+            "repetition": false,
+            "manualactivation": false,
+            "required": false,
+            "bordercolor": "#000000"
+          },
+          "childShapes": [],
+          "labels": []
+        },
+        {
+          "outgoing": [],
+          "resourceId": "sid-92BA36C7-2723-470F-B7CB-BBCB5329AF0B",
+          "formats": {},
+          "bounds": {
+            "upperLeft": {
+              "x": 300,
+              "y": 86
+            },
+            "lowerRight": {
+              "x": 502,
+              "y": 248
+            }
+          },
+          "layers": [],
+          "glossaryLinks": {},
+          "labelDirtyStates": {},
+          "stencil": {
+            "id": "CasePlanModel"
+          },
+          "dockers": [],
+          "properties": {
+            "autocomplete": false,
+            "name": "AnotherMasterPlan",
+            "description": ""
+          },
+          "childShapes": [
+            {
+              "outgoing": [],
+              "resourceId": "sid-1E788737-FCDC-4FC8-89D5-8CFA88731BDF",
+              "formats": {},
+              "bounds": {
+                "upperLeft": {
+                  "x": 57,
+                  "y": 56
+                },
+                "lowerRight": {
+                  "x": 144,
+                  "y": 106
+                }
+              },
+              "layers": [],
+              "glossaryLinks": {},
+              "labelDirtyStates": {},
+              "stencil": {
+                "id": "TextAnnotation"
+              },
+              "dockers": [],
+              "properties": {
+                "name": "",
+                "description": "",
+                "text": "Case Plan Models are not really nested"
+              },
+              "childShapes": [],
+              "labels": []
+            }
+          ],
+          "labels": []
+        }
+      ],
+      "labels": []
+    }
+  ]
+}
