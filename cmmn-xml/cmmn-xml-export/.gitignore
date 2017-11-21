@@ -1,9 +1,9 @@
-src/test/resources/signavio/*
+src/test/resources/signavio/*.json
 
 ### Gradle template
 .gradle
 /build/
-/libs
+/libs/*.jar
 
 # Ignore Gradle GUI config
 gradle-app.setting
