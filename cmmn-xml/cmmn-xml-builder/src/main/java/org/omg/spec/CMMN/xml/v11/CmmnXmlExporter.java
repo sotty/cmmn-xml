@@ -56,9 +56,9 @@ public abstract class CmmnXmlExporter<T> {
 		TDefinitions definitions = getTranslator().apply( source );
 
 		try {
-			return marshall(definitions, validating);
+			return marshall( definitions, validating );
 		} catch (JAXBException | SAXException e) {
-			throw new RuntimeException(e);
+			throw new RuntimeException( e );
 		}
 	}
 

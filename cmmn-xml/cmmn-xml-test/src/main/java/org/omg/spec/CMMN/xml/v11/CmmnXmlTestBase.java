@@ -124,9 +124,9 @@ public abstract class CmmnXmlTestBase<S> {
 			return xmlExporter.generateXml();
 		} catch ( Exception e ) {
 			CmmnXmlExporter debugExporter = getExporter( model, UUID.randomUUID().toString(), false ).get();
-			String xml = debugExporter.generateXml();
-			fail( e.getMessage() + "\n" + xml );
+			fail( e.getMessage() + "\n" + debugExporter.generateXml() );
 		}
+
 		return null;
 	}
 
@@ -168,7 +168,6 @@ public abstract class CmmnXmlTestBase<S> {
 			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 			transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 			transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
-
 
 			transformer.transform(new DOMSource(dox),
 			                      new StreamResult( new OutputStreamWriter( out, "UTF-8")) );
