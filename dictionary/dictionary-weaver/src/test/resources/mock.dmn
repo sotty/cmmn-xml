@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions namespace="http://www.signavio.com/dmn/1.1/diagram/6cde50c962e449feaf3e0e534d15e946.xml" exporterVersion="11.9.4" name="Test Decision" id="id-4bf164eed4df4873a074e758a5077198" sigExt:revisionId="5c8424aea3724cfd989bdd0471aab2cd" sigExt:revisionNumber="15" xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:sig="http://www.signavio.com/dmn/1.1/diagram/6cde50c962e449feaf3e0e534d15e946.xml" xmlns:sigExt="http://www.signavio.com/schema/dmn/1.1/" xmlns:feel="http://www.omg.org/spec/FEEL/20140401">
+    <extensionElements>
+        <sigExt:diagramMetaData name="assetid" value="[{&quot;label&quot;:&quot;Mock&quot;,&quot;url&quot;:&quot;http://my.test.com/123456&quot;}]"/>
+        <sigExt:diagramMetaData name="knowledgeassettype" value="/glossary/af76c6c0ed31415aa9fa0f5d7e08bad8"/>
+    </extensionElements>
+    <itemDefinition isCollection="false" name="manifestDm" id="id-5ed3f6ff3c005fe4b4f1d171854735b8" label="Manifest | DM
+">
+        <typeRef>feel:boolean</typeRef>
+    </itemDefinition>
+    <itemDefinition isCollection="false" name="bP" id="id-45c86b1cf3c637d00cb486ccc1337751" label="BP
+">
+        <typeRef>feel:string</typeRef>
+    </itemDefinition>
+    <itemDefinition isCollection="false" name="valueOfCurrentBloodPressure" id="id-d50b99e4b0c217ba0d8e369d12b57f6b" label="Value of : Current | Blood Pressure" sigExt:glossaryId="52965c22a9564b629425727bdbb46f5c">
+        <typeRef>feel:number</typeRef>
+    </itemDefinition>
+    <itemDefinition isCollection="false" name="isCurrentlyHasActiveHyperthyroidism" id="id-c56f293a09001ccd5db1ad1e4df349c3" label="Is : Currently | Has - Active Hyperthyroidism">
+        <typeRef>feel:string</typeRef>
+    </itemDefinition>
+    <inputData name="valueOfCurrentBloodPressure" id="id-4de5afecd020a04167b029d8ded3ff0f" label="Value of : Current | Blood Pressure" sigExt:shapeId="sid-F8E1F3D3-E55B-4982-B4AA-00F0D1AC9888" sigExt:diagramId="6cde50c962e449feaf3e0e534d15e946">
+        <extensionElements>
+            <sigExt:diagramMetaData name="clinicalproposition" value="[]"/>
+        </extensionElements>
+        <variable typeRef="sig:valueOfCurrentBloodPressure" name="valueOfCurrentBloodPressure" id="id-4de5afecd020a04167b029d8ded3ff0f_variable"/>
+    </inputData>
+    <decision name="aC" id="id-2b15c8edc827aef2034f0d2a41031eb3" label="AC" sigExt:shapeId="sid-ECFC0750-5300-4314-8717-0EE9ACE800FB" sigExt:diagramId="6cde50c962e449feaf3e0e534d15e946">
+        <extensionElements>
+            <sigExt:diagramMetaData name="formalanswers" value="[]"/>
+            <sigExt:diagramMetaData name="clinicalconcept" value="[&quot;/glossary/d790bae00b2c4c08bbdccca604325eaa&quot;]"/>
+            <sigExt:diagramMetaData name="expression" value="/glossary/4ab4365c793b42c2b92317e3ec829a07"/>
+            <sigExt:diagramMetaData name="fragmenttype" value="[]"/>
+            <sigExt:diagramMetaData name="knowledgeassettype" value=""/>
+            <sigExt:diagramMetaData name="clinicalproposition" value="[&quot;/glossary/e677060a0db74a7a9ac55e9337824e92&quot;,&quot;/glossary/50a4ed95abeb41e69702b55351d5cd5d&quot;]"/>
+        </extensionElements>
+        <variable typeRef="sig:manifestDm" name="aC" id="id-2b15c8edc827aef2034f0d2a41031eb3_variable"/>
+        <informationRequirement>
+            <requiredDecision href="#id-47727151ef65a2c8a12c340f150bac4d"/>
+        </informationRequirement>
+        <authorityRequirement>
+            <requiredAuthority href="#id-69df3ee7b6939dfdc45f526ba4b2f16f"/>
+        </authorityRequirement>
+        <literalExpression>
+            <text>manifestDm</text>
+        </literalExpression>
+    </decision>
+    <decision name="isCurrentlyHasActiveHyperthyroidism" id="id-247138b70720f7263e548c8892360437" label="Is : Currently | Has - Active Hyperthyroidism" sigExt:shapeId="sid-498CDC53-30AB-4B83-AAAC-1FC733CC929D" sigExt:diagramId="6cde50c962e449feaf3e0e534d15e946">
+        <extensionElements>
+            <sigExt:diagramMetaData name="formalanswers" value=""/>
+            <sigExt:diagramMetaData name="clinicalconcept" value=""/>
+            <sigExt:diagramMetaData name="expression" value=""/>
+            <sigExt:diagramMetaData name="fragmenttype" value=""/>
+            <sigExt:diagramMetaData name="knowledgeassettype" value=""/>
+            <sigExt:diagramMetaData name="clinicalproposition" value="[]"/>
+        </extensionElements>
+        <variable typeRef="sig:isCurrentlyHasActiveHyperthyroidism" name="isCurrentlyHasActiveHyperthyroidism" id="id-247138b70720f7263e548c8892360437_variable"/>
+        <literalExpression expressionLanguage="free_text">
+            <text>x</text>
+        </literalExpression>
+    </decision>
+    <knowledgeSource name="hypertension" id="id-b687aa5aa2ee37c6023729df5d0979b2" label="Hypertension">
+        <authorityRequirement>
+            <requiredAuthority href="#id-247138b70720f7263e548c8892360437"/>
+        </authorityRequirement>
+        <type>boolean</type>
+    </knowledgeSource>
+    <knowledgeSource name="test" id="id-69df3ee7b6939dfdc45f526ba4b2f16f" label="Test
+"/>
+    <inputData name="bP" id="id-fa92a2142fbcffa9bf4c8e2553bb3b09" label="BP
+" sigExt:shapeId="sid-3711A720-2895-4F9B-AC60-294825A8F166" sigExt:diagramId="42e62421cfca43f4a8272fd130161fc0">
+        <extensionElements>
+            <sigExt:diagramMetaData name="endpoint" value=""/>
+        </extensionElements>
+        <variable typeRef="sig:bP" name="bP" id="id-fa92a2142fbcffa9bf4c8e2553bb3b09_variable"/>
+    </inputData>
+    <decision name="manifestDm" id="id-47727151ef65a2c8a12c340f150bac4d" label="Manifest | DM
+" sigExt:shapeId="sid-EC4ACC91-07BF-426D-B7B2-4A6A552D3AD4" sigExt:diagramId="42e62421cfca43f4a8272fd130161fc0">
+        <extensionElements>
+            <sigExt:diagramMetaData name="clinicalconcept" value="[&quot;/glossary/d790bae00b2c4c08bbdccca604325eaa&quot;]"/>
+            <sigExt:diagramMetaData name="expression" value=""/>
+            <sigExt:diagramMetaData name="knowledgeassettype" value=""/>
+            <sigExt:diagramMetaData name="clinicalproposition" value="[&quot;/glossary/e007f5cc5442479e8b5c65c782c992b0&quot;]"/>
+            <sigExt:diagramMetaData name="endpoint" value=""/>
+        </extensionElements>
+        <variable typeRef="sig:manifestDm" name="manifestDm" id="id-47727151ef65a2c8a12c340f150bac4d_variable"/>
+        <informationRequirement>
+            <requiredInput href="#id-fa92a2142fbcffa9bf4c8e2553bb3b09"/>
+        </informationRequirement>
+        <authorityRequirement>
+            <requiredAuthority href="#id-7abb70ad56fa7200954d0cc30c200830"/>
+        </authorityRequirement>
+        <literalExpression expressionLanguage="http://www.omg.org/spec/FEEL/20140401">
+            <text>true</text>
+        </literalExpression>
+    </decision>
+    <knowledgeSource locationURI="http://www.foo.bar" name="all" id="id-7abb70ad56fa7200954d0cc30c200830" label="All
+"/>
+</definitions>

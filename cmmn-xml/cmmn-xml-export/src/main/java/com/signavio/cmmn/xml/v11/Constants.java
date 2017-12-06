@@ -4,7 +4,9 @@ package com.signavio.cmmn.xml.v11;
 
 public class Constants {
 
-	public static final String NS_DIAGRAM_SIGNAVIO = "http://www.signavio.com/cmmn/1.1/diagram";
+	public static final String NS_BPMN_DIAGRAM_SIGNAVIO = "http://www.signavio.com/bpmn/2.0/diagram";
+	public static final String NS_DMN_DIAGRAM_SIGNAVIO = "http://www.signavio.com/dmn/1.1/diagram";
+	public static final String NS_CMMN_DIAGRAM_SIGNAVIO = "http://www.signavio.com/cmmn/1.1/diagram";
 	public static final String NS_TARGET_SIGNAVIO = "http://www.signavio.com/cmmn/1.1/";
 	public static final String NS_SCHEMA_SIGNAVIO = "http://www.signavio.com/schema/cmmn/1.1/";
 	public static final String NS_NAME_SIGNAVIO = "sig";

@@ -12,7 +12,7 @@ apply plugin: 'maven'
 
 jaxb {
     xsdDir project.name + "/src/main/resources/xsd"
-    bindingsDir project.name + "/src/main/resources/xsd"
+    bindingsDir project.name + "/src/main/resources/xjb"
     bindings = ["bindings.xjb"]
 
     xjc {

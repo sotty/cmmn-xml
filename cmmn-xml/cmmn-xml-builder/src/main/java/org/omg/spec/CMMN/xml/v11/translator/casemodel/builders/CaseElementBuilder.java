@@ -19,14 +19,25 @@ public class CaseElementBuilder<S> extends AbstractLinkingElementBuilder<S,TCase
 	}
 
 	@Override
-	public Optional<TCase> ret( S s ) {
-		return element.getCasePlanModel() != null ? Optional.of( element ) : Optional.empty();
-	}
-
-	@Override
 	public S pre( final S s ) {
 		getBuildStack().push( element );
 		return super.pre(s);
+	}
+
+	@Override
+	public Optional<TCase> ret( S s ) {
+		if ( element.getCasePlanModel() != null ) {
+			return super.ret( s );
+		} else {
+			// this builder is constructing the fictious
+			// Case element that results from the mis-labelling of
+			// the top level Shape element.
+			// some metadata may need to be moved
+			b.getRoot().withExtensionElements( element.getExtensionElements() );
+			b.getRoot().getCase().iterator().next().withId( element.getId() );
+			b.getRoot().getCase().iterator().next().withDocumentation( element.getDocumentation() );
+			return Optional.empty();
+		}
 	}
 
 	@Override

@@ -7,6 +7,7 @@ public enum CMMNComponents {
 
 	DEFINITIONS( "Definitions" ),
 	DOCUMENTATION( "Documentation" ),
+	EXTENSION( "Extensions" ),
 	;
 
 	private String name;

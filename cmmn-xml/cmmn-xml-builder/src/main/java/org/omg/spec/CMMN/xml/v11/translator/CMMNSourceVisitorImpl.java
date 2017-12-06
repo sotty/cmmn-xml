@@ -67,5 +67,5 @@ public abstract class CMMNSourceVisitorImpl<D,S,N,T> implements CMMNSourceVisito
 
 	public abstract S getNullSource();
 
-	public abstract QName toQName( String s );
+	public abstract QName toQName( String s, String pre );
 }

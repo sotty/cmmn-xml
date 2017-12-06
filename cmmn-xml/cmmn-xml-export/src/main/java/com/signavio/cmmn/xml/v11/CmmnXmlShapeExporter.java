@@ -3,6 +3,7 @@ package com.signavio.cmmn.xml.v11;
 
 import com.signavio.cmmn.xml.v11.translator.CMMNShapeTranslator;
 import com.signavio.diagram.model.Diagram;
+import com.signavio.schema.cmmn._1.DiagramMetaData;
 import org.omg.spec.CMMN.xml.v11.CmmnXmlExporter;
 import org.omg.spec.CMMN.xml.v11.NameSpaceMapper;
 import org.omg.spec.cmmn._20151109.model.TDefinitions;
@@ -11,7 +12,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.PropertyException;
-import java.util.function.Function;
+import java.util.function.BiFunction;
 
 
 public class CmmnXmlShapeExporter extends CmmnXmlExporter<Diagram> {
@@ -22,12 +23,12 @@ public class CmmnXmlShapeExporter extends CmmnXmlExporter<Diagram> {
 	}
 
 	@Override
-	protected Function<Diagram, TDefinitions> getTranslator() {
+	protected BiFunction<Diagram, String, TDefinitions> getTranslator() {
 		return new CMMNShapeTranslator( new CustomObjectFactory() );
 	}
 
 	protected void configureMarshaller(TDefinitions definition, Marshaller marshaller) throws PropertyException {
-		String localNs = Constants.NS_DIAGRAM_SIGNAVIO + definition.getTargetNamespace() ;
+		String localNs = definition.getTargetNamespace() ;
 
 		NameSpaceMapper namespaceMapper = (NameSpaceMapper) marshaller.getProperty( NAMESPACE_MAPPER_PROPERTY );
 
@@ -41,7 +42,7 @@ public class CmmnXmlShapeExporter extends CmmnXmlExporter<Diagram> {
 	}
 
 	protected JAXBContext getJAXBInstance() throws JAXBException {
-		return JAXBContext.newInstance( CustomObjectFactory.class, TDefinitions.class );
+		return JAXBContext.newInstance( CustomObjectFactory.class, TDefinitions.class, DiagramMetaData.class );
 	}
 
 }

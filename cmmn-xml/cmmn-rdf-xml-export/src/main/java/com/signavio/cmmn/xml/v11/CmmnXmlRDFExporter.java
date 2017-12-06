@@ -11,7 +11,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.PropertyException;
-import java.util.function.Function;
+import java.util.function.BiFunction;
 
 
 public class CmmnXmlRDFExporter extends CmmnXmlExporter<Model> {
@@ -22,7 +22,7 @@ public class CmmnXmlRDFExporter extends CmmnXmlExporter<Model> {
 	}
 
 	@Override
-	protected Function<Model, TDefinitions> getTranslator() {
+	protected BiFunction<Model, String, TDefinitions> getTranslator() {
 		return new CMMNRdfTranslator( new CustomObjectFactory() );
 	}
 

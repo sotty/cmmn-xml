@@ -9,14 +9,14 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Optional;
 
-import static org.omg.spec.CMMN.xml.v11.Constants.NAME_OMG_CMMN_CMMNDI_v11;
-import static org.omg.spec.CMMN.xml.v11.Constants.NAME_OMG_CMMN_DC_v11;
-import static org.omg.spec.CMMN.xml.v11.Constants.NAME_OMG_CMMN_DI_v11;
-import static org.omg.spec.CMMN.xml.v11.Constants.NAME_OMG_CMMN_v11;
-import static org.omg.spec.CMMN.xml.v11.Constants.NS_OMG_CMMN_CMMNDI_v11;
-import static org.omg.spec.CMMN.xml.v11.Constants.NS_OMG_CMMN_DC_v11;
-import static org.omg.spec.CMMN.xml.v11.Constants.NS_OMG_CMMN_DI_v11;
-import static org.omg.spec.CMMN.xml.v11.Constants.NS_OMG_CMMN_v11;
+import static org.omg.spec.CMMN.xml.v11.OMGConstants.NAME_OMG_CMMN_CMMNDI_v11;
+import static org.omg.spec.CMMN.xml.v11.OMGConstants.NAME_OMG_CMMN_DC_v11;
+import static org.omg.spec.CMMN.xml.v11.OMGConstants.NAME_OMG_CMMN_DI_v11;
+import static org.omg.spec.CMMN.xml.v11.OMGConstants.NAME_OMG_CMMN_v11;
+import static org.omg.spec.CMMN.xml.v11.OMGConstants.NS_OMG_CMMN_CMMNDI_v11;
+import static org.omg.spec.CMMN.xml.v11.OMGConstants.NS_OMG_CMMN_DC_v11;
+import static org.omg.spec.CMMN.xml.v11.OMGConstants.NS_OMG_CMMN_DI_v11;
+import static org.omg.spec.CMMN.xml.v11.OMGConstants.NS_OMG_CMMN_v11;
 
 /**
  * Implementation of {@link NamespacePrefixMapper} that maps the schema
@@ -40,6 +40,7 @@ public class NameSpaceMapper extends NamespacePrefixMapper {
 		namespaceMap.put( NS_OMG_CMMN_v11, NAME_OMG_CMMN_v11 );
 		namespaceMap.put( NS_OMG_CMMN_CMMNDI_v11, NAME_OMG_CMMN_CMMNDI_v11 );
 		namespaceMap.put( XMLConstants.XML_NS_URI, XMLConstants.XMLNS_ATTRIBUTE );
+		namespaceMap.put( "http://www.signavio.com/schema/cmmn/1.1/", "sigExt" );
 	}
 
 

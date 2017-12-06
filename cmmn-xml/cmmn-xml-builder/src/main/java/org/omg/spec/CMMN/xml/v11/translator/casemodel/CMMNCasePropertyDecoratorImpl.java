@@ -1,9 +1,11 @@
 package org.omg.spec.CMMN.xml.v11.translator.casemodel;
 
 
+import com.signavio.schema.cmmn._1.DiagramMetaData;
 import org.omg.spec.CMMN.xml.v11.CMMNComponents;
 import org.omg.spec.CMMN.xml.v11.CMMNElements;
 import org.omg.spec.CMMN.xml.v11.CMMNProperties;
+import org.omg.spec.CMMN.xml.v11.OMGConstants;
 import org.omg.spec.CMMN.xml.v11.Utils;
 import org.omg.spec.cmmn._20151109.model.TCase;
 import org.omg.spec.cmmn._20151109.model.TCaseFileItem;
@@ -16,6 +18,7 @@ import org.omg.spec.cmmn._20151109.model.TDefinitions;
 import org.omg.spec.cmmn._20151109.model.TDiscretionaryItem;
 import org.omg.spec.cmmn._20151109.model.TDocumentation;
 import org.omg.spec.cmmn._20151109.model.TEventListener;
+import org.omg.spec.cmmn._20151109.model.TExtensionElements;
 import org.omg.spec.cmmn._20151109.model.THumanTask;
 import org.omg.spec.cmmn._20151109.model.TIfPart;
 import org.omg.spec.cmmn._20151109.model.TManualActivationRule;
@@ -35,6 +38,7 @@ import org.omg.spec.cmmn._20151109.model.TTask;
 import org.omg.spec.cmmn._20151109.model.TTimerEventListener;
 import org.omg.spec.cmmn._20151109.model.TUserEventListener;
 
+import java.util.Map;
 import java.util.stream.Stream;
 
 public abstract class CMMNCasePropertyDecoratorImpl<D,S> implements CMMNCasePropertyDecorator<S> {
@@ -47,6 +51,10 @@ public abstract class CMMNCasePropertyDecoratorImpl<D,S> implements CMMNCaseProp
 	}
 
 	protected abstract Stream<CMMNProperties> propertiesOf( final S o, final CMMNProperties.Category cat );
+
+	protected abstract Map<String,String> annotationsOf( final S o );
+
+	protected abstract boolean hasMetadata( final S o );
 
 	public abstract String valueOf( final S o, final CMMNProperties prop );
 
@@ -62,6 +70,13 @@ public abstract class CMMNCasePropertyDecoratorImpl<D,S> implements CMMNCaseProp
 					break;
 			}
 		} );
+
+		if ( hasMetadata( o ) ) {
+			f.buildComponent( CMMNComponents.EXTENSION,
+			                  o,
+			                  TExtensionElements.class ).ifPresent( tCmmnElement::withExtensionElements );
+		}
+
 		if ( tCmmnElement.getId() == null || tCmmnElement.getId().isEmpty() || ! tCmmnElement.getId().equalsIgnoreCase( f.extractOrGenerateId( o ) ) ) {
 			tCmmnElement.setId( f.extractOrGenerateId( o ) );
 		}
@@ -135,7 +150,7 @@ public abstract class CMMNCasePropertyDecoratorImpl<D,S> implements CMMNCaseProp
 		propertiesOf( o, CMMNProperties.Category.MODEL ).forEach( ( prop ) -> {
 			switch ( prop ) {
 				case ENTRY:
-					tProcessTask.withProcessRef( f.toQName( valueOf( o, prop ) ) );
+					tProcessTask.withProcessRef( f.toQName( valueOf( o, prop ), OMGConstants.NS_OMG_BPMN_v20 ) );
 					break;
 			}
 
@@ -146,6 +161,14 @@ public abstract class CMMNCasePropertyDecoratorImpl<D,S> implements CMMNCaseProp
 
 	public TCaseTask decorateCaseTask( final S o, final TCaseTask tCaseTask ) {
 		decorateTask( o, tCaseTask );
+		propertiesOf( o, CMMNProperties.Category.MODEL ).forEach( ( prop ) -> {
+			switch ( prop ) {
+				case ENTRY:
+					tCaseTask.withCaseRef( f.toQName( valueOf( o, prop ), OMGConstants.NS_OMG_CMMN_v11 ) );
+					break;
+			}
+
+		} );
 		return tCaseTask;
 	}
 
@@ -154,7 +177,7 @@ public abstract class CMMNCasePropertyDecoratorImpl<D,S> implements CMMNCaseProp
 		propertiesOf( o, CMMNProperties.Category.MODEL ).forEach( ( prop ) -> {
 			switch ( prop ) {
 				case ENTRY:
-					tDecisionTask.withDecisionRef( f.toQName( valueOf( o, prop ) ) );
+					tDecisionTask.withDecisionRef( f.toQName( valueOf( o, prop ), OMGConstants.NS_OMG_DMN_v11 ) );
 					break;
 			}
 		} );
@@ -248,7 +271,21 @@ public abstract class CMMNCasePropertyDecoratorImpl<D,S> implements CMMNCaseProp
 				break;
 			}
 		} );
+
+		if ( hasMetadata( o ) ) {
+			f.buildComponent( CMMNComponents.EXTENSION,
+			                  o,
+			                  TExtensionElements.class ).ifPresent( tDefinitions::withExtensionElements );
+		}
 		return tDefinitions;
+	}
+
+	public TExtensionElements decorateExtensions( final S o, final TExtensionElements tExtensionElements ) {
+		annotationsOf( o )
+				.forEach( (k,v) -> tExtensionElements.withAny( new DiagramMetaData( )
+						                                               .withName( k.substring( "meta-".length() ) )
+						                                               .withValue( v ) ) );
+		return tExtensionElements;
 	}
 
 	@Override

@@ -21,15 +21,15 @@ public class ModelGenerationTest {
 
 		defs.withAuthor( "self" )
 		    .withCase( f.createTCase().withId( "1" ), f.createTCase().withId( "2" ) )
-	        .withCMMNDI( new CMMNDI().withCMMNDiagrams( (CMMNDiagram) new CMMNDiagram().withId( "D" ) ) );
+	        .withCMMNDI( new CMMNDI().withCMMNDiagram( (CMMNDiagram) new CMMNDiagram().withId( "D" ) ) );
 
 		assertEquals( "self", defs.getAuthor() );
 
 		assertEquals( 2, defs.getCase().size() );
 		assertEquals( "1", defs.getCase().get( 0 ).getId() );
 
-		assertEquals( 1, defs.getCMMNDI().getCMMNDiagrams().size() );
-		assertEquals( "D", defs.getCMMNDI().getCMMNDiagrams().get( 0 ).getId() );
-		assertFalse( defs.getCMMNDI().getCMMNDiagrams().get( 0 ).isSetSize() );
+		assertEquals( 1, defs.getCMMNDI().getCMMNDiagram().size() );
+		assertEquals( "D", defs.getCMMNDI().getCMMNDiagram().get( 0 ).getId() );
+		assertFalse( defs.getCMMNDI().getCMMNDiagram().get( 0 ).isSetSize() );
 	}
 }

@@ -13,6 +13,7 @@ import org.omg.spec.cmmn._20151109.model.TDefinitions;
 import org.omg.spec.cmmn._20151109.model.TDiscretionaryItem;
 import org.omg.spec.cmmn._20151109.model.TDocumentation;
 import org.omg.spec.cmmn._20151109.model.TEventListener;
+import org.omg.spec.cmmn._20151109.model.TExtensionElements;
 import org.omg.spec.cmmn._20151109.model.THumanTask;
 import org.omg.spec.cmmn._20151109.model.TIfPart;
 import org.omg.spec.cmmn._20151109.model.TManualActivationRule;
@@ -99,5 +100,7 @@ public interface CMMNCasePropertyDecorator<S> {
 	TDocumentation decorateDocumentation( final S o, final TDocumentation tDocumentation );
 	
 	TDefinitions decorateDefinitions( final S o, final TDefinitions tDefinitions );
+
+	TExtensionElements decorateExtensions( final S o, final TExtensionElements tDefinitions );
 
 }

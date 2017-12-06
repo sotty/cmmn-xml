@@ -20,11 +20,12 @@ public class CMMNRdfTranslator extends BaseCMMNTranslator<Model> {
 
 
 	@Override
-	public TDefinitions apply( Model source ) {
+	public TDefinitions apply( Model source, String id ) {
 
 		CMMNCaseBuilder<Model,Resource> builder = new CMMNRdfCaseBuilder( source, factory );
 
 		TDefinitions def = builder.apply( source );
+		def.withTargetNamespace( id );
 
 		return def;
 	}

@@ -19,6 +19,7 @@ import org.omg.spec.CMMN.xml.v11.translator.casemodel.builders.DiscretionaryItem
 import org.omg.spec.CMMN.xml.v11.translator.casemodel.builders.DocumentationComponentBuilder;
 import org.omg.spec.CMMN.xml.v11.translator.casemodel.builders.ElementBuilder;
 import org.omg.spec.CMMN.xml.v11.translator.casemodel.builders.EventListenerElementBuilder;
+import org.omg.spec.CMMN.xml.v11.translator.casemodel.builders.ExtensionsComponentBuilder;
 import org.omg.spec.CMMN.xml.v11.translator.casemodel.builders.GenericTaskElementBuilder;
 import org.omg.spec.CMMN.xml.v11.translator.casemodel.builders.IfPartElementBuilder;
 import org.omg.spec.CMMN.xml.v11.translator.casemodel.builders.ManualRuleElementBuilder;
@@ -110,6 +111,7 @@ public abstract class CMMNCaseBuilder<D,S> extends CMMNSourceVisitorImpl<D,S,TCm
 		registerElementBuilder( CMMNElements.TEXT, NopElementBuilder::new );
 		registerComponentBuilder( CMMNComponents.DOCUMENTATION, DocumentationComponentBuilder::new );
 		registerComponentBuilder( CMMNComponents.DEFINITIONS, DefinitionsElementBuilder::new );
+		registerComponentBuilder( CMMNComponents.EXTENSION, ExtensionsComponentBuilder::new );
 	}
 
 	public TDefinitions getRoot() {
@@ -151,12 +153,11 @@ public abstract class CMMNCaseBuilder<D,S> extends CMMNSourceVisitorImpl<D,S,TCm
 		root = buildComponent( CMMNComponents.DEFINITIONS, o, TDefinitions.class )
 				.orElseGet( f::createTDefinitions );
 
-		visitSource( o ).ifPresent( tCmmnElement -> root.withCase( TCase.class.isInstance( tCmmnElement )
+		Optional<? extends TCmmnElement> el = visitSource( o );
+
+		el.ifPresent( tCmmnElement -> root.withCase( TCase.class.isInstance( tCmmnElement )
 				                                                      ? TCase.class.cast( tCmmnElement )
 				                                                      : f.createTCase() ) );
-		if ( root.getCase().isEmpty() ) {
-			root.withCase( f.createTCase() );
-		}
 		return root;
 	}
 

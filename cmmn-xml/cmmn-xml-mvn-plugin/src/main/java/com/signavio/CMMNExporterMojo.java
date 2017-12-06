@@ -15,6 +15,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
@@ -24,7 +25,8 @@ import java.util.zip.ZipInputStream;
 @Mojo( name = "cmmn-export")
 public class CMMNExporterMojo extends AbstractMojo {
 
-	private final Pattern pattern = Pattern.compile( "^.*/model_\\d+_.json" );
+	final Pattern idPattern         = Pattern.compile( ".*\\/model_(.*)\\/model_\\d+_.json" );
+	final Pattern modelPattern      = Pattern.compile( "^.*/model_\\d+_.json" );
 
 	@Parameter
 	private List<File> folders = null;
@@ -65,14 +67,22 @@ public class CMMNExporterMojo extends AbstractMojo {
 		ZipEntry zipEntry = zis.getNextEntry();
 		while( zipEntry != null ) {
 			String fileName = zipEntry.getName();
-			if ( pattern.matcher( fileName ).find() ) {
-				saveFile( export( unzip( zipEntry, zis ) ), f.getParent(), f.getName(), root.getAbsolutePath(), targetFolder );
+			if ( modelPattern.matcher( fileName ).find() ) {
+				saveFile( export( unzip( zipEntry, zis ), getId( fileName ) ), f.getParent(), f.getName(), root.getAbsolutePath(), targetFolder );
 			}
 			zipEntry = zis.getNextEntry();
 
 		}
 		zis.closeEntry();
 		zis.close();
+	}
+
+	private String getId( String fileName ) {
+		Matcher matcher = idPattern.matcher( fileName );
+		if ( ! matcher.find () ) {
+			throw new IllegalStateException( "Could not detect model ID from entry name pattern " + fileName );
+		}
+		return matcher.group( 1 );
 	}
 
 	private void saveFile( String export, String parent, String name, String root, String tgtFolder ) throws IOException {
@@ -98,9 +108,9 @@ public class CMMNExporterMojo extends AbstractMojo {
 		return baos.toByteArray();
 	}
 
-	private String export( byte[] model ) throws Exception {
+	private String export( byte[] model, String artifactId ) throws Exception {
 		Diagram diagram = DiagramBuilder.parseJson( new String( model ), UUID.randomUUID().toString() );
-		return new CmmnXmlShapeExporter( diagram, false ).generateXml();
+		return new CmmnXmlShapeExporter( diagram, false ).generateXml( artifactId );
 	}
 
 }

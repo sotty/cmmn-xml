@@ -1,6 +1,7 @@
 package com.signavio;
 
-import edu.mayo.mea3d.preprocess.meta.DictionaryWeaver;
+import edu.mayo.mea3d.preprocess.meta.DictionaryEntryWeaver;
+import edu.mayo.mea3d.preprocess.meta.DictionaryReader;
 import edu.mayo.mea3d.util.Util;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -9,14 +10,16 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.w3c.dom.Document;
 
-import javax.swing.text.html.Option;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.List;
 import java.util.Optional;
+import java.util.Properties;
+
+import static edu.mayo.mea3d.util.XMLUtil.loadXMLDocument;
+import static edu.mayo.mea3d.util.XMLUtil.streamXMLDocument;
 
 
 @Mojo( name = "dictionary-weave" )
@@ -32,6 +35,9 @@ public class DictionaryWeaverMojo extends AbstractMojo {
 	@Parameter
 	private File dictionary = null;
 
+	@Parameter
+	private Properties properties = null;
+
 	public void execute() throws MojoExecutionException {
 		if ( folders != null ) {
 			for ( File dir : folders ) {
@@ -41,41 +47,25 @@ public class DictionaryWeaverMojo extends AbstractMojo {
 	}
 
 	private void processDir( File root, File dir ) {
-		if ( dir != null && dir.isDirectory() ) {
-			File[] files = dir.listFiles();
-			if ( files != null && files.length > 0 ) {
-				for ( int j = 0; j < files.length; j++ ) {
-					File f = files[ j ];
-					if ( f.isDirectory() ) {
-						processDir( dir, f );
-					} else {
-						try {
-							processXMLFile( root, f );
-						} catch ( Exception e ) {
-							e.printStackTrace();
-						}
-					}
-				}
-			}
-		}
+		Util.processDir( root, dir, this::processXMLFile );
 	}
 
-	private void processXMLFile( File root, File f ) throws Exception {
-		if ( f.getAbsolutePath().endsWith( "dmn" ) ) {
-			saveFile( weave( f ), f.getParent(), f.getName(), root.getAbsolutePath(), targetFolder );
+	private void processXMLFile( File root, File f )  {
+		try {
+			if ( f.getAbsolutePath().endsWith( "dmn" ) || f.getAbsolutePath().endsWith( "cmmn" ) ) {
+				saveFile( weave( f ), f.getParent(), f.getName(), root.getAbsolutePath(), targetFolder );
+			}
+		} catch ( Exception e ) {
+			e.printStackTrace();
 		}
 	}
 
 	private Document weave( File f ) {
 		try {
-			Optional<XSSFWorkbook> wk = DictionaryWeaver.getDictionary( new FileInputStream( dictionary ) );
-			if ( ! wk.isPresent() ) {
-				return null;
-			}
-			DictionaryWeaver weaver = new DictionaryWeaver( wk.get(), false );
-			Optional<Document> dox = Util.loadXMLDocument( f.toURI().toURL() );
+			DictionaryEntryWeaver weaver = new DictionaryEntryWeaver( new FileInputStream( dictionary ), false, properties );
+			Optional<Document> dox = loadXMLDocument( f.toURI().toURL() );
 			if ( dox.isPresent() ) {
-				return dox.map( weaver::weave ).get();
+				return dox.map( weaver::weave ).orElse( null );
 			}
 		} catch ( Exception e ) {
 			e.printStackTrace();
@@ -95,7 +85,7 @@ public class DictionaryWeaverMojo extends AbstractMojo {
 			out.getParentFile().mkdirs();
 		}
 		FileOutputStream fos = new FileOutputStream( out );
-		Util.streamXMLDocument( export, fos );
+		streamXMLDocument( export, fos );
 		fos.flush();
 		fos.close();
 	}

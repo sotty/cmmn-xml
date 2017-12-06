@@ -2,6 +2,7 @@ package com.signavio.cmmn.xml.v11;
 
 
 import org.json.JSONException;
+import org.omg.spec.CMMN.xml.v11.OMGConstants;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.w3c.dom.Document;
@@ -48,17 +49,17 @@ public class CmmnExportSimpleTest extends CmmnXmlShapeTestBase {
 	@Test
 	public void testNamespaces() {
 		Node n = xNode( "hw", "/cmmn:definitions" );
-		assertEquals( org.omg.spec.CMMN.xml.v11.Constants.NS_OMG_CMMN_v11, attr( n, "xmlns:cmmn" ) );
-		assertEquals( org.omg.spec.CMMN.xml.v11.Constants.NS_OMG_CMMN_CMMNDI_v11, attr( n, "xmlns:cmmndi" ) );
-		assertEquals( org.omg.spec.CMMN.xml.v11.Constants.NS_OMG_CMMN_DC_v11, attr( n, "xmlns:dc" ) );
+		assertEquals( OMGConstants.NS_OMG_CMMN_v11, attr( n, "xmlns:cmmn" ) );
+		assertEquals( OMGConstants.NS_OMG_CMMN_CMMNDI_v11, attr( n, "xmlns:cmmndi" ) );
+		assertEquals( OMGConstants.NS_OMG_CMMN_DC_v11, attr( n, "xmlns:dc" ) );
 		assertEquals( Constants.NS_SCHEMA_SIGNAVIO, attr( n, "xmlns:" + Constants.NS_NAME_SIGNAVIO_EXTENSIONS ) );
 
-		assertEquals( org.omg.spec.CMMN.xml.v11.Constants.NS_OMG_CMMN_DI_v11, attr( n, "xmlns:di" ) );
+		assertEquals( OMGConstants.NS_OMG_CMMN_DI_v11, attr( n, "xmlns:di" ) );
 
 		String tgt = attr( n, "targetNamespace" ).toString();
 		String sig = attr( n, "xmlns:" + Constants.NS_NAME_SIGNAVIO ).toString();
 
-		assertEquals( sig, Constants.NS_DIAGRAM_SIGNAVIO + tgt );
+		assertEquals( tgt, sig );
 	}
 
 

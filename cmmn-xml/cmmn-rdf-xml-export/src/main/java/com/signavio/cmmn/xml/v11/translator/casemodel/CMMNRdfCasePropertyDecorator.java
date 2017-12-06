@@ -13,7 +13,9 @@ import org.omg.spec.CMMN.xml.v11.CMMNProperties;
 import org.omg.spec.CMMN.xml.v11.translator.casemodel.CMMNCaseBuilder;
 import org.omg.spec.CMMN.xml.v11.translator.casemodel.CMMNCasePropertyDecoratorImpl;
 
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Stream;
@@ -39,6 +41,16 @@ public class CMMNRdfCasePropertyDecorator extends CMMNCasePropertyDecoratorImpl<
 			}
 		}
 		return props.stream();
+	}
+
+	@Override
+	protected Map<String, String> annotationsOf( Resource o ) {
+		return Collections.emptyMap();
+	}
+
+	@Override
+	protected boolean hasMetadata( Resource o ) {
+		return false;
 	}
 
 	public Optional<String> getProperty( final Resource o, final CMMNProperties prop ) {

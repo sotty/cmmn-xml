@@ -55,8 +55,8 @@ public class CMMNShapeCaseBuilder extends CMMNCaseBuilder<Diagram,Shape> {
 	}
 
 	@Override
-	public QName toQName( String s ) {
-		return new QName( Constants.NS_DIAGRAM_SIGNAVIO, "_" + s.substring( s.lastIndexOf( '/' ) + 1 ) );
+	public QName toQName( String s, String pre ) {
+		return IDUtils.constructQName( s, pre );
 	}
 
 	/**
@@ -66,6 +66,7 @@ public class CMMNShapeCaseBuilder extends CMMNCaseBuilder<Diagram,Shape> {
 	 * @param shape   The source {@link Diagram}
 	 * @return          A unique ID for the CMMN model instance
 	 */
+	@Override
 	public String extractOrGenerateId( final Object shape ) {
 		if ( shape instanceof Shape ) {
 			return IDUtils.extractOrGenerateId( ( Shape ) shape );
@@ -74,6 +75,7 @@ public class CMMNShapeCaseBuilder extends CMMNCaseBuilder<Diagram,Shape> {
 		}
 
 	}
+
 
 	@Override
 	public boolean isEntrySentry( String id ) {

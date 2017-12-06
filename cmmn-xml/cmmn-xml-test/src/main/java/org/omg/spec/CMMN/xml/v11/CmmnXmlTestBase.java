@@ -19,17 +19,25 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 
+import static java.util.Objects.requireNonNull;
 import static org.testng.AssertJUnit.fail;
 
 public abstract class CmmnXmlTestBase<S> {
@@ -109,25 +117,76 @@ public abstract class CmmnXmlTestBase<S> {
 	}
 
 
-	protected String readFile(String path) throws IOException {
+	protected String readFile( String path ) throws IOException {
 		InputStream inputStream = CmmnXmlTestBase.class.getClassLoader().getResourceAsStream( path );
 		byte[] data = new byte[ inputStream.available() ];
 		inputStream.read( data );
 		return new String( data );
 	}
 
-	protected String toXML(String path) throws IOException {
-		String model = readFile(path);
+	protected Map<String,String> toXML( String path ) throws IOException {
+		Map<String,String> srcModels = extractModels( path );
+		Map<String,String> xmlModels = new HashMap<>();
 
-		CmmnXmlExporter<S> xmlExporter = getExporter( model, UUID.randomUUID().toString(), true ).get();
+		srcModels.forEach( (artifactId, model) -> {
+			Optional<CmmnXmlExporter<S>> xmlExporter = getExporter( model, artifactId, true );
+			if ( xmlExporter.isPresent() ) {
+				try {
+					xmlModels.put( artifactId, xmlExporter.get().generateXml( artifactId ) );
+				} catch ( Exception e ) {
+					Optional<CmmnXmlExporter<S>> debugExporter = getExporter( model, artifactId, false );
+					fail( e.getMessage() + "\n" + debugExporter.map( (db) -> db.generateXml( artifactId ) ).orElse( "" ) );
+				}
+			}
+		} );
+		return xmlModels;
+	}
+
+	protected Map<String,String> extractModels( String path ) {
+
 		try {
-			return xmlExporter.generateXml();
-		} catch ( Exception e ) {
-			CmmnXmlExporter debugExporter = getExporter( model, UUID.randomUUID().toString(), false ).get();
-			fail( e.getMessage() + "\n" + debugExporter.generateXml() );
+			if ( path.endsWith( ".sgx" ) ) {
+				return loadModelArchive( path );
+			} else {
+				Map<String,String> res = new HashMap<>();
+				res.put( UUID.randomUUID().toString(), readFile( path ) );
+				return res;
+			}
+		} catch ( IOException e ) {
+			fail( e.getMessage() );
+			e.printStackTrace();
 		}
+		return Collections.emptyMap();
+	}
 
-		return null;
+	private Map<String, String> loadModelArchive( String path ) {
+		final Pattern p = Pattern.compile( ".*\\/model_(.*)\\/model_\\d+_.json" );
+		HashMap<String,String> map = new HashMap<>();
+		try {
+			ZipFile zip = new ZipFile( new File( requireNonNull( CmmnXmlTestBase.class.getClassLoader().getResource( path ) ).toURI() ) );
+
+			zip.stream()
+			   .forEach( (entry) -> {
+			   	    Matcher m = p.matcher( entry.getName() );
+			   	    if ( m.find() ) {
+			   	    	String artifactId = m.group( 1 );
+				        try {
+					        InputStream is = zip.getInputStream( entry );
+					        byte[] data = new byte[ is.available() ];
+					        is.read( data );
+					        String model = new String( data );
+					        map.put( artifactId, model );
+				        } catch ( IOException e ) {
+					        e.printStackTrace();
+				        }
+			        }
+			   } );
+
+		} catch ( IOException | URISyntaxException e ) {
+			fail( e.getMessage() );
+			return Collections.emptyMap();
+		}
+		return map;
 	}
 
 	protected abstract Optional<CmmnXmlExporter<S>> getExporter( String model, String id, boolean b );
@@ -147,7 +206,10 @@ public abstract class CmmnXmlTestBase<S> {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setNamespaceAware( true );
 			DocumentBuilder builder = factory.newDocumentBuilder();
-			String xml = toXML( path );
+
+			// in general, a package may contain more than one model. this test class assumes that there is only one.
+			String xml = toXML( path ).entrySet().iterator().next().getValue();
+
 			Document dox = builder.parse( new ByteArrayInputStream( xml.getBytes() ) );
 			xmls.put( key, dox );
 

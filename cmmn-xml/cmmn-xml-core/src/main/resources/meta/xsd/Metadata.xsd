@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            xmlns="http://www.signavio.com/schema/cmmn/1.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.signavio.com/schema/cmmn/1.1/">
+
+  <xsd:element name="diagramMetaData" type="tDiagramMetaData"/>
+  <xsd:complexType name="tDiagramMetaData">
+    <xsd:attribute name="name" type="xsd:string"/>
+    <xsd:attribute name="value" type="xsd:string"/>
+  </xsd:complexType>
+
+</xsd:schema>

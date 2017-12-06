@@ -8,8 +8,7 @@ public class DefinitionsElementBuilder<S> extends AbstractComponentBuilder<S,TDe
 
 	@Override
 	public S init( final S s ) {
-		element = getFactory().createTDefinitions()
-		                      .withTargetNamespace( getId( s ) );
+		element = getFactory().createTDefinitions();
 		return s;
 	}
 

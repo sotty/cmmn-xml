@@ -1,6 +1,7 @@
 package org.omg.spec.CMMN.xml.v11;
 
 
+import com.signavio.schema.cmmn._1.DiagramMetaData;
 import org.omg.spec.cmmn._20151109.model.ObjectFactory;
 import org.omg.spec.cmmn._20151109.model.TDefinitions;
 import org.xml.sax.SAXException;
@@ -14,7 +15,7 @@ import java.io.ByteArrayInputStream;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.Optional;
-import java.util.function.Function;
+import java.util.function.BiFunction;
 
 
 public abstract class CmmnXmlExporter<T> {
@@ -52,8 +53,8 @@ public abstract class CmmnXmlExporter<T> {
 		this.validating = validating;
 	}
 
-	public String generateXml() {
-		TDefinitions definitions = getTranslator().apply( source );
+	public String generateXml( String artifactId ) {
+		TDefinitions definitions = getTranslator().apply( source, artifactId );
 
 		try {
 			return marshall( definitions, validating );
@@ -62,7 +63,7 @@ public abstract class CmmnXmlExporter<T> {
 		}
 	}
 
-	protected abstract Function<T,TDefinitions> getTranslator();
+	protected abstract BiFunction<T,String,TDefinitions> getTranslator();
 
 	public boolean validateCMMN_XML( final String xml ) {
 		return new CMMNSchemaValidator().validate( new ByteArrayInputStream( xml.getBytes() ) );
@@ -108,6 +109,6 @@ public abstract class CmmnXmlExporter<T> {
 	}
 	
 	protected JAXBContext getJAXBInstance() throws JAXBException {
-		return JAXBContext.newInstance( CMMNObjectFactory.class, TDefinitions.class );
+		return JAXBContext.newInstance( CMMNObjectFactory.class, TDefinitions.class, DiagramMetaData.class );
 	}
 }

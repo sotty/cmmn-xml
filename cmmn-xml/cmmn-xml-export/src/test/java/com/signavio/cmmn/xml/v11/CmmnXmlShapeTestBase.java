@@ -15,9 +15,9 @@ public class CmmnXmlShapeTestBase extends CmmnXmlTestBase {
 
 
 	@Override
-	protected Optional<CmmnXmlExporter> getExporter( String model, String id, boolean validate ) {
+	protected Optional<CmmnXmlExporter> getExporter( String model, String artifactId, boolean validate ) {
 		try {
-			Diagram diagram = DiagramBuilder.parseJson( model, id );
+			Diagram diagram = DiagramBuilder.parseJson( model, artifactId );
 			return Optional.of( new CmmnXmlShapeExporter( diagram, validate ) );
 		} catch ( JSONException e ) {
 			e.printStackTrace();

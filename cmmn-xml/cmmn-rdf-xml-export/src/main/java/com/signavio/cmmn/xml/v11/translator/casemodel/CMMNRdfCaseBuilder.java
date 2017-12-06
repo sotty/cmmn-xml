@@ -105,8 +105,8 @@ public class CMMNRdfCaseBuilder extends CMMNCaseBuilder<Model,Resource> {
 	}
 
 	@Override
-	public QName toQName( String s ) {
-		return new QName( Constants.NS_DIAGRAM_SIGNAVIO, "_" + s.substring( s.lastIndexOf( '/' ) + 1 ) );
+	public QName toQName( String s, String pre ) {
+		return new QName( pre, "_" + s.substring( s.lastIndexOf( '/' ) + 1 ) );
 	}
 
 
@@ -117,6 +117,10 @@ public class CMMNRdfCaseBuilder extends CMMNCaseBuilder<Model,Resource> {
 			return Utils.randomID();
 		}
 
+	}
+	public String getNamespace( final Object r ) {
+		//TODO Fixme
+		return extractOrGenerateId( r );
 	}
 
 	@Override

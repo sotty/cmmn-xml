@@ -127,7 +127,7 @@ public class CMMNDiagramBuilder extends CMMNSourceVisitorImpl<Diagram,Shape,Diag
 	}
 
 	@Override
-	public QName toQName( String s ) {
-		return new QName( s );
+	public QName toQName( String s, String pre ) {
+		return new QName( pre, s );
 	}
 }

@@ -64,8 +64,8 @@ public abstract class AbstractBuilder<S,T> implements ElementBuilder<S,T> {
 	}
 
 
-	protected QName toQName( String s ) {
-		return b.toQName( s );
+	protected QName toQName( String s, String pre ) {
+		return b.toQName( s, pre );
 	}
 
 

@@ -2,6 +2,7 @@ package com.signavio.cmmn.xml.v11.translator;
 
 import com.signavio.cmmn.xml.v11.Constants;
 import com.signavio.cmmn.xml.v11.CustomObjectFactory;
+import com.signavio.cmmn.xml.v11.IDUtils;
 import com.signavio.cmmn.xml.v11.translator.casemodel.CMMNShapeCaseBuilder;
 import com.signavio.cmmn.xml.v11.translator.diagram.CMMNDiagramBuilder;
 import com.signavio.diagram.model.Diagram;
@@ -40,15 +41,16 @@ public class CMMNShapeTranslator extends BaseCMMNTranslator<Diagram> {
 	 * @return          A {@link TDefinitions} object
 	 */
 	@Override
-	public TDefinitions apply( final Diagram diagram ) {
+	public TDefinitions apply( final Diagram diagram, String artifactId ) {
 		diagram.setProperty( CMMNProperties.EXPORTER.getName(), Constants.DEFAULT_EXPORTER );
 		diagram.setProperty( CMMNProperties.EXPORTER_VERSION.getName(), Constants.DEFAULT_EXPORTER_VERSION );
 
 		CMMNCaseBuilder<Diagram,Shape> builder = new CMMNShapeCaseBuilder( diagram, factory );
 
 		TDefinitions def = builder.apply( diagram );
+		def.withTargetNamespace( IDUtils.getNamespace( artifactId ) );
 
-		def.withCMMNDI( new CMMNDI().withCMMNDiagrams( new CMMNDiagramBuilder().apply( diagram ) ) );
+		def.withCMMNDI( new CMMNDI().withCMMNDiagram( new CMMNDiagramBuilder().apply( diagram ) ) );
 
 		return def;
 	}
