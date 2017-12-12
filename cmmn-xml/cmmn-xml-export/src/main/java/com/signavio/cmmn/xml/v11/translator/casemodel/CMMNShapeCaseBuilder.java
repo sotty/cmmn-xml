@@ -1,6 +1,5 @@
 package com.signavio.cmmn.xml.v11.translator.casemodel;
 
-import com.signavio.cmmn.xml.v11.Constants;
 import com.signavio.cmmn.xml.v11.IDUtils;
 import com.signavio.diagram.model.Diagram;
 import com.signavio.diagram.model.Node;

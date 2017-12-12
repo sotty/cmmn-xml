@@ -110,7 +110,7 @@ class WeaverTest {
 
 		try {
 			new DictionaryEntryWeaver( true,
-			                           props() .set( "METADATA_NS",
+			                           props().set( "METADATA_NS",
 					                                 "http://www.signavio.com/schema/cmmn/1.1/").get() )
 					.weave( dox );
 

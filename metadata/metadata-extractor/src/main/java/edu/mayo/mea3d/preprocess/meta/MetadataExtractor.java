@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import edu.mayo.kmdp.metadata.AssetSurrogate;
 import edu.mayo.kmdp.metadata.ObjectFactory;
 import edu.mayo.mea3d.util.JSONUtil;
+import edu.mayo.mea3d.util.JaxbUtil;
+import edu.mayo.mea3d.util.PropertiesUtil;
 import edu.mayo.mea3d.util.Util;
 import org.w3c.dom.Document;
 
@@ -81,6 +83,13 @@ public class MetadataExtractor {
 		} );
 	}
 
+	public Optional<Document> doExtract( Document dox, JsonNode meta ) {
+		ObjectFactory factory = new ObjectFactory();
+		return JaxbUtil.marshallDox( factory.getClass(),
+		                             extract( dox, meta ),
+		                             factory::createAssetSurrogate,
+		                             PropertiesUtil.empty() );
+	}
 
 	public AssetSurrogate extract( Document dox, JsonNode meta ) {
 		return strategy.extractXML( dox, meta );

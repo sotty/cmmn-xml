@@ -3,7 +3,6 @@ package org.omg.spec.CMMN.xml.v11.translator;
 import org.omg.spec.cmmn._20151109.model.TDefinitions;
 
 import java.util.function.BiFunction;
-import java.util.function.Function;
 
 
 public interface CMMNTranslator<S> extends BiFunction<S, String, TDefinitions> {

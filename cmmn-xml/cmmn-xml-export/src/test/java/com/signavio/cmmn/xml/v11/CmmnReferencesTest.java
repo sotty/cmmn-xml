@@ -10,7 +10,6 @@ import java.io.IOException;
 
 import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
-import static org.testng.AssertJUnit.assertTrue;
 
 public class CmmnReferencesTest extends CmmnXmlShapeTestBase {
 

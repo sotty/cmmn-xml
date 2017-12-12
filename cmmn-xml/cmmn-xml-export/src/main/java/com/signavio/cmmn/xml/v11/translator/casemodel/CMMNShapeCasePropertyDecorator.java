@@ -11,8 +11,6 @@ import org.omg.spec.CMMN.xml.v11.translator.casemodel.CMMNCasePropertyDecoratorI
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 

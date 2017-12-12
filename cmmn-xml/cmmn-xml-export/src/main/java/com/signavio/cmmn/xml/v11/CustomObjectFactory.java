@@ -1,11 +1,7 @@
 package com.signavio.cmmn.xml.v11;
 
-import com.signavio.schema.cmmn._1.DiagramMetaData;
 import org.omg.spec.CMMN.xml.v11.CMMNObjectFactory;
-import org.omg.spec.cmmn._20151109.di.DiagramElement;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
 

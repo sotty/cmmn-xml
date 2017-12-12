@@ -3,7 +3,6 @@ package com.signavio.cmmn.xml.v11;
 import org.json.JSONException;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
 import java.io.IOException;
