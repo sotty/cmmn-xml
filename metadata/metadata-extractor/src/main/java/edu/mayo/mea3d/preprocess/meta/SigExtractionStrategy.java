@@ -5,7 +5,6 @@ import edu.mayo.kmdp.MetadataHelper;
 import edu.mayo.kmdp.metadata.AboutRel;
 import edu.mayo.kmdp.metadata.Annotation;
 import edu.mayo.kmdp.metadata.AssetSurrogate;
-import edu.mayo.kmdp.metadata.Association;
 import edu.mayo.kmdp.metadata.DocumentInfo;
 import edu.mayo.kmdp.metadata.FormalNotation;
 import edu.mayo.kmdp.metadata.IDReference;
@@ -15,15 +14,13 @@ import edu.mayo.kmdp.metadata.SimpleAnnotation;
 import edu.mayo.kmdp.metadata.TermAnnotation;
 import edu.mayo.mea3d.util.JaxbUtil;
 import edu.mayo.mea3d.util.PropertiesUtil;
-import edu.mayo.mea3d.util.XMLUtil;
-import edu.mayo.mea3d.util.schemas.MEA3DNamespaceMapper;
+import edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
 import java.net.URI;
 import java.util.Optional;
 
-import static edu.mayo.kmdp.MetadataHelper.assoc;
 import static edu.mayo.kmdp.MetadataHelper.id;
 import static edu.mayo.kmdp.MetadataHelper.t;
 import static edu.mayo.mea3d.util.JSONUtil.jDate;
@@ -114,7 +111,7 @@ public class SigExtractionStrategy implements ExtractionStrategy {
 	}
 
 	private void extractAnnotations( AssetSurrogate surr, Document dox ) {
-		NodeList annos = dox.getElementsByTagNameNS( MEA3DNamespaceMapper.NS_KMDP_SURR, TermAnnotation.class.getSimpleName() );
+		NodeList annos = dox.getElementsByTagNameNS( StandardsNamespaceMapper.NS_KMDP_SURR, TermAnnotation.class.getSimpleName() );
 
 		JaxbUtil.unmarshall( ObjectFactory.class, Annotation.class, annos, PropertiesUtil.empty() ).stream()
 		        .filter( (anno) -> anno instanceof TermAnnotation || anno instanceof MultiTermAnnotation )

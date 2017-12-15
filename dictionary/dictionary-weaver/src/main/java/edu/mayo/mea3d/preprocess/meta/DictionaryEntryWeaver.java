@@ -30,10 +30,10 @@ import static edu.mayo.mea3d.preprocess.meta.DictionaryConfig.p_METADATA_NS;
 import static edu.mayo.mea3d.preprocess.meta.MetadataAttributeNameMapper.map;
 import static edu.mayo.mea3d.util.Util.normalize;
 import static edu.mayo.mea3d.util.XMLUtil.asElementStream;
-import static edu.mayo.mea3d.util.schemas.MEA3DNamespaceMapper.NS_KMDP_SURR;
-import static edu.mayo.mea3d.util.schemas.MEA3DNamespaceMapper.NS_OMG_CMMN_v11;
-import static edu.mayo.mea3d.util.schemas.MEA3DNamespaceMapper.NS_OMG_DMN_v11;
-import static edu.mayo.mea3d.util.schemas.MEA3DNamespaceMapper.PFX_KMDP_SURR;
+import static edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper.NS_KMDP_SURR;
+import static edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper.NS_OMG_CMMN_v11;
+import static edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper.NS_OMG_DMN_v11;
+import static edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper.PFX_KMDP_SURR;
 
 public class DictionaryEntryWeaver {
 

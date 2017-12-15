@@ -1,6 +1,7 @@
 package edu.mayo.mea3d;
 
 import edu.mayo.mea3d.preprocess.meta.DictionaryEntryWeaver;
+import edu.mayo.mea3d.util.Registry;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.jupiter.api.Test;
 import org.w3c.dom.Document;
@@ -40,7 +41,7 @@ class WeaverTest {
 
 
 			streamXMLDocument( dox, System.out );
-			assertTrue( validate( dox ) );
+			assertTrue( validate( dox, Registry.Languages.DMN ) );
 		} catch ( IllegalStateException ie ) {
 			ie.printStackTrace();
 			fail( ie.getMessage() );
@@ -55,7 +56,7 @@ class WeaverTest {
 		try {
 			new DictionaryEntryWeaver( true ).weave( dox );
 
-			assertTrue( validate( dox ) );
+			assertTrue( validate( dox, Registry.Languages.DMN ) );
 
 			streamXMLDocument( dox, System.out );
 		} catch ( IllegalStateException ie ) {

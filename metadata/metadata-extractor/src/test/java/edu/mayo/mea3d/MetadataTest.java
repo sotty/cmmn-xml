@@ -7,6 +7,7 @@ import edu.mayo.mea3d.preprocess.meta.IdentityMapper;
 import edu.mayo.mea3d.preprocess.meta.MetadataExtractor;
 import edu.mayo.mea3d.util.JSONUtil;
 import edu.mayo.mea3d.util.JaxbUtil;
+import edu.mayo.mea3d.util.Registry;
 import edu.mayo.mea3d.util.Util;
 import edu.mayo.mea3d.util.XMLUtil;
 import org.apache.jena.rdf.model.Model;
@@ -87,7 +88,7 @@ class MetadataTest {
 			boolean ans = baos.map( ByteArrayOutputStream::toByteArray )
 			    .map( ByteArrayInputStream::new )
 			    .map( StreamSource::new )
-			    .map( XMLUtil::validate )
+			    .map( (dox) -> XMLUtil.validate( dox, Registry.Languages.DMN ) )
 			                  .orElse( false );
 			assertTrue( ans );
 		}

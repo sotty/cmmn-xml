@@ -1,13 +1,11 @@
 package edu.mayo.mea3d.preprocess.meta;
 
 import edu.mayo.kmdp.metadata.Association;
-import edu.mayo.mea3d.util.schemas.MEA3DNamespaceMapper;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
 import org.w3c.dom.Document;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -18,8 +16,8 @@ import java.util.Optional;
 import static edu.mayo.kmdp.MetadataHelper.assoc;
 import static edu.mayo.mea3d.util.Util.isEmpty;
 import static edu.mayo.mea3d.util.XMLUtil.loadXMLDocument;
-import static edu.mayo.mea3d.util.schemas.MEA3DNamespaceMapper.NS_OMG_API4KP_REL;
-import static edu.mayo.mea3d.util.schemas.MEA3DNamespaceMapper.PFX_OMG_API4KP_REL;
+import static edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper.NS_OMG_API4KP_REL;
+import static edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper.PFX_OMG_API4KP_REL;
 
 public class IdentityMapper {
 
