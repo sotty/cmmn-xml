@@ -1,9 +1,7 @@
 package com.signavio;
 
 import edu.mayo.mea3d.preprocess.meta.MetadataExtractor;
-import edu.mayo.mea3d.util.Util;
 import org.apache.maven.plugin.AbstractMojo;
-import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
@@ -17,9 +15,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
 
+import static edu.mayo.kmdp.util.Util.processDir;
 import static edu.mayo.mea3d.preprocess.meta.MetadataExtractor.Format.XML;
-import static edu.mayo.mea3d.util.Util.processDir;
-import static edu.mayo.mea3d.util.XMLUtil.streamXMLDocument;
 
 
 @Mojo( name = "metadata-extract" )

@@ -6,7 +6,7 @@ import edu.mayo.kmdp.metadata.MultiTermAnnotation;
 import edu.mayo.kmdp.metadata.ObjectFactory;
 import edu.mayo.kmdp.metadata.SimpleAnnotation;
 import edu.mayo.kmdp.metadata.TermAnnotation;
-import edu.mayo.mea3d.util.JaxbUtil;
+import edu.mayo.kmdp.util.JaxbUtil;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.w3c.dom.Document;
@@ -21,6 +21,12 @@ import java.util.Optional;
 import java.util.Properties;
 import java.util.regex.Matcher;
 
+import static edu.mayo.kmdp.registry.Registry.KMDP_SURR;
+import static edu.mayo.kmdp.registry.Registry.OMG_CMMN_v11;
+import static edu.mayo.kmdp.registry.Registry.OMG_DMN_v11;
+import static edu.mayo.kmdp.registry.Registry.PFX_KMDP_SURR;
+import static edu.mayo.kmdp.util.Util.normalize;
+import static edu.mayo.kmdp.util.XMLUtil.asElementStream;
 import static edu.mayo.mea3d.preprocess.meta.DictionaryConfig.DCT_PATTERN;
 import static edu.mayo.mea3d.preprocess.meta.DictionaryConfig.URL_PATTERN;
 import static edu.mayo.mea3d.preprocess.meta.DictionaryConfig.p_ATTR_GX;
@@ -28,12 +34,6 @@ import static edu.mayo.mea3d.preprocess.meta.DictionaryConfig.p_EL_ANNOTATED_ITE
 import static edu.mayo.mea3d.preprocess.meta.DictionaryConfig.p_EL_ANNOTATION;
 import static edu.mayo.mea3d.preprocess.meta.DictionaryConfig.p_METADATA_NS;
 import static edu.mayo.mea3d.preprocess.meta.MetadataAttributeNameMapper.map;
-import static edu.mayo.mea3d.util.Util.normalize;
-import static edu.mayo.mea3d.util.XMLUtil.asElementStream;
-import static edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper.NS_KMDP_SURR;
-import static edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper.NS_OMG_CMMN_v11;
-import static edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper.NS_OMG_DMN_v11;
-import static edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper.PFX_KMDP_SURR;
 
 public class DictionaryEntryWeaver {
 
@@ -95,7 +95,7 @@ public class DictionaryEntryWeaver {
 
 		dox.getDocumentElement().setAttributeNS( "http://www.w3.org/2000/xmlns/",
 		                                         "xmlns:" + PFX_KMDP_SURR,
-		                                         NS_KMDP_SURR );
+		                                         KMDP_SURR );
 
 		dox.getDocumentElement().setAttributeNS( "http://www.w3.org/2001/XMLSchema-instance",
 		                                         "xsi:" + "schemaLocation",
@@ -255,13 +255,13 @@ public class DictionaryEntryWeaver {
 	private String getSchemaLocations( Document dox ) {
 		StringBuilder sb = new StringBuilder();
 
-		sb.append( NS_KMDP_SURR ).append( " " ).append( "xsd/edu/mayo/kmdp/surrogate.xsd" );
+		sb.append( KMDP_SURR ).append( " " ).append( "xsd/edu/mayo/kmdp/surrogate.xsd" );
 
 		String baseNS = dox.getDocumentElement().getNamespaceURI();
 		if ( baseNS.contains( "DMN" ) ) {
-			sb.append( " " ).append( NS_OMG_DMN_v11 ).append( " " ).append( NS_OMG_DMN_v11 );
+			sb.append( " " ).append( OMG_DMN_v11 ).append( " " ).append( OMG_DMN_v11 );
 		} else if ( baseNS.contains( "CMMN" ) ) {
-			sb.append( " " ).append( NS_OMG_CMMN_v11 ).append( " " ).append( NS_OMG_CMMN_v11 );
+			sb.append( " " ).append( OMG_CMMN_v11 ).append( " " ).append( OMG_CMMN_v11 );
 		}
 
 		return sb.toString();

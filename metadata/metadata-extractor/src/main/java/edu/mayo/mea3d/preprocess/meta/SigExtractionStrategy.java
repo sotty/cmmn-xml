@@ -12,9 +12,9 @@ import edu.mayo.kmdp.metadata.MultiTermAnnotation;
 import edu.mayo.kmdp.metadata.ObjectFactory;
 import edu.mayo.kmdp.metadata.SimpleAnnotation;
 import edu.mayo.kmdp.metadata.TermAnnotation;
-import edu.mayo.mea3d.util.JaxbUtil;
-import edu.mayo.mea3d.util.PropertiesUtil;
-import edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper;
+import edu.mayo.kmdp.util.JaxbUtil;
+import edu.mayo.kmdp.util.PropertiesUtil;
+import edu.mayo.kmdp.util.schemas.StandardsNamespaceMapper;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
@@ -23,19 +23,20 @@ import java.util.Optional;
 
 import static edu.mayo.kmdp.MetadataHelper.id;
 import static edu.mayo.kmdp.MetadataHelper.t;
-import static edu.mayo.mea3d.util.JSONUtil.jDate;
-import static edu.mayo.mea3d.util.JSONUtil.jNode;
-import static edu.mayo.mea3d.util.JSONUtil.jString;
-import static edu.mayo.mea3d.util.Registry.OMG_CMMN;
-import static edu.mayo.mea3d.util.Registry.OMG_CMMN_v11;
-import static edu.mayo.mea3d.util.Registry.OMG_DMN;
-import static edu.mayo.mea3d.util.Registry.OMG_DMN_v11;
-import static edu.mayo.mea3d.util.Registry.W3C_XML;
-import static edu.mayo.mea3d.util.Registry.W3C_XML_v11;
-import static edu.mayo.mea3d.util.XMLUtil.asElementStream;
-import static edu.mayo.mea3d.util.XPathUtil.xList;
-import static edu.mayo.mea3d.util.XPathUtil.xNode;
-import static edu.mayo.mea3d.util.XPathUtil.xString;
+import static edu.mayo.kmdp.registry.Registry.KMDP_SURR;
+import static edu.mayo.kmdp.registry.Registry.OMG_CMMN;
+import static edu.mayo.kmdp.registry.Registry.OMG_CMMN_v11;
+import static edu.mayo.kmdp.registry.Registry.OMG_DMN;
+import static edu.mayo.kmdp.registry.Registry.OMG_DMN_v11;
+import static edu.mayo.kmdp.registry.Registry.W3C_XML;
+import static edu.mayo.kmdp.registry.Registry.W3C_XML_v11;
+import static edu.mayo.kmdp.util.JSONUtil.jDate;
+import static edu.mayo.kmdp.util.JSONUtil.jNode;
+import static edu.mayo.kmdp.util.JSONUtil.jString;
+import static edu.mayo.kmdp.util.XMLUtil.asElementStream;
+import static edu.mayo.kmdp.util.XPathUtil.xList;
+import static edu.mayo.kmdp.util.XPathUtil.xNode;
+import static edu.mayo.kmdp.util.XPathUtil.xString;
 
 
 public class SigExtractionStrategy implements ExtractionStrategy {
@@ -111,7 +112,7 @@ public class SigExtractionStrategy implements ExtractionStrategy {
 	}
 
 	private void extractAnnotations( AssetSurrogate surr, Document dox ) {
-		NodeList annos = dox.getElementsByTagNameNS( StandardsNamespaceMapper.NS_KMDP_SURR, TermAnnotation.class.getSimpleName() );
+		NodeList annos = dox.getElementsByTagNameNS( KMDP_SURR, TermAnnotation.class.getSimpleName() );
 
 		JaxbUtil.unmarshall( ObjectFactory.class, Annotation.class, annos, PropertiesUtil.empty() ).stream()
 		        .filter( (anno) -> anno instanceof TermAnnotation || anno instanceof MultiTermAnnotation )

@@ -2,7 +2,7 @@ package com.signavio;
 
 import edu.mayo.mea3d.preprocess.meta.DictionaryEntryWeaver;
 import edu.mayo.mea3d.preprocess.meta.DictionaryReader;
-import edu.mayo.mea3d.util.Util;
+import edu.mayo.kmdp.util.Util;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Properties;
 
-import static edu.mayo.mea3d.util.XMLUtil.loadXMLDocument;
-import static edu.mayo.mea3d.util.XMLUtil.streamXMLDocument;
+import static edu.mayo.kmdp.util.XMLUtil.loadXMLDocument;
+import static edu.mayo.kmdp.util.XMLUtil.streamXMLDocument;
 
 
 @Mojo( name = "dictionary-weave" )

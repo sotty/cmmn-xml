@@ -3,23 +3,19 @@ package edu.mayo.mea3d.preprocess.meta;
 import com.fasterxml.jackson.databind.JsonNode;
 import edu.mayo.kmdp.metadata.AssetSurrogate;
 import edu.mayo.kmdp.metadata.ObjectFactory;
-import edu.mayo.mea3d.util.JSONUtil;
-import edu.mayo.mea3d.util.JaxbUtil;
-import edu.mayo.mea3d.util.PropertiesUtil;
-import edu.mayo.mea3d.util.Util;
+import edu.mayo.kmdp.util.JSONUtil;
+import edu.mayo.kmdp.util.JaxbUtil;
+import edu.mayo.kmdp.util.PropertiesUtil;
 import org.w3c.dom.Document;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 import java.util.Properties;
 
-import static edu.mayo.mea3d.util.JaxbUtil.marshall;
-import static edu.mayo.mea3d.util.Util.isEmpty;
-import static edu.mayo.mea3d.util.XMLUtil.loadXMLDocument;
-import static edu.mayo.mea3d.util.ZipUtil.readZipEntry;
+import static edu.mayo.kmdp.util.JaxbUtil.marshall;
+import static edu.mayo.kmdp.util.XMLUtil.loadXMLDocument;
+import static edu.mayo.kmdp.util.ZipUtil.readZipEntry;
 
 public class MetadataExtractor {
 

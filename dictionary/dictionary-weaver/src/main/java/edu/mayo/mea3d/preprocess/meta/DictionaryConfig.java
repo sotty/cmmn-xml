@@ -1,6 +1,6 @@
 package edu.mayo.mea3d.preprocess.meta;
 
-import edu.mayo.mea3d.util.PropertiesUtil;
+import edu.mayo.kmdp.util.PropertiesUtil;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -11,9 +11,9 @@ import java.util.Optional;
 import java.util.Properties;
 import java.util.regex.Pattern;
 
-import static edu.mayo.mea3d.util.PropertiesUtil.pString;
-import static edu.mayo.mea3d.util.Util.resolveResource;
-import static edu.mayo.mea3d.util.XMLUtil.getPrefix;
+import static edu.mayo.kmdp.util.PropertiesUtil.pString;
+import static edu.mayo.kmdp.util.Util.resolveResource;
+import static edu.mayo.kmdp.util.XMLUtil.getPrefix;
 
 public class DictionaryConfig {
 

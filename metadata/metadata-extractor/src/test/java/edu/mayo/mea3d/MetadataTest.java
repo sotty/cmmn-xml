@@ -1,15 +1,14 @@
 package edu.mayo.mea3d;
 
-import edu.mayo.kmdp.MetadataHelper;
 import edu.mayo.kmdp.metadata.AssetSurrogate;
 import edu.mayo.kmdp.metadata.Association;
+import edu.mayo.kmdp.registry.Registry;
+import edu.mayo.kmdp.util.JSONUtil;
+import edu.mayo.kmdp.util.JaxbUtil;
+import edu.mayo.kmdp.util.Util;
+import edu.mayo.kmdp.util.XMLUtil;
 import edu.mayo.mea3d.preprocess.meta.IdentityMapper;
 import edu.mayo.mea3d.preprocess.meta.MetadataExtractor;
-import edu.mayo.mea3d.util.JSONUtil;
-import edu.mayo.mea3d.util.JaxbUtil;
-import edu.mayo.mea3d.util.Registry;
-import edu.mayo.mea3d.util.Util;
-import edu.mayo.mea3d.util.XMLUtil;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;

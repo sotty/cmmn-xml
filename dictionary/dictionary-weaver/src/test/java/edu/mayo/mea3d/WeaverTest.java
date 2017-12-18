@@ -1,19 +1,19 @@
 package edu.mayo.mea3d;
 
 import edu.mayo.mea3d.preprocess.meta.DictionaryEntryWeaver;
-import edu.mayo.mea3d.util.Registry;
+import edu.mayo.kmdp.registry.Registry;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.jupiter.api.Test;
 import org.w3c.dom.Document;
 
-import static edu.mayo.mea3d.util.PropertiesUtil.props;
-import static edu.mayo.mea3d.util.Util.resolveResource;
-import static edu.mayo.mea3d.util.XMLUtil.loadXMLDocument;
-import static edu.mayo.mea3d.util.XMLUtil.streamXMLDocument;
-import static edu.mayo.mea3d.util.XMLUtil.validate;
-import static edu.mayo.mea3d.util.XPathUtil.attr;
-import static edu.mayo.mea3d.util.XPathUtil.xNode;
-import static edu.mayo.mea3d.util.XPathUtil.xString;
+import static edu.mayo.kmdp.util.PropertiesUtil.props;
+import static edu.mayo.kmdp.util.Util.resolveResource;
+import static edu.mayo.kmdp.util.XMLUtil.loadXMLDocument;
+import static edu.mayo.kmdp.util.XMLUtil.streamXMLDocument;
+import static edu.mayo.kmdp.util.XMLUtil.validate;
+import static edu.mayo.kmdp.util.XPathUtil.attr;
+import static edu.mayo.kmdp.util.XPathUtil.xNode;
+import static edu.mayo.kmdp.util.XPathUtil.xString;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

@@ -14,10 +14,10 @@ import java.util.Map;
 import java.util.Optional;
 
 import static edu.mayo.kmdp.MetadataHelper.assoc;
-import static edu.mayo.mea3d.util.Util.isEmpty;
-import static edu.mayo.mea3d.util.XMLUtil.loadXMLDocument;
-import static edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper.NS_OMG_API4KP_REL;
-import static edu.mayo.mea3d.util.schemas.StandardsNamespaceMapper.PFX_OMG_API4KP_REL;
+import static edu.mayo.kmdp.registry.Registry.OMG_API4KP_REL;
+import static edu.mayo.kmdp.registry.Registry.PFX_OMG_API4KP_REL;
+import static edu.mayo.kmdp.util.Util.isEmpty;
+import static edu.mayo.kmdp.util.XMLUtil.loadXMLDocument;
 
 public class IdentityMapper {
 
@@ -32,7 +32,7 @@ public class IdentityMapper {
 		this.strategy = strategy;
 
 		this.graph = ModelFactory.createDefaultModel();
-		this.graph.setNsPrefix( PFX_OMG_API4KP_REL, NS_OMG_API4KP_REL );
+		this.graph.setNsPrefix( PFX_OMG_API4KP_REL, OMG_API4KP_REL );
 	}
 
 	public void scan( InputStream resource ) {
