@@ -150,14 +150,20 @@ public abstract class CMMNCaseBuilder<D,S> extends CMMNSourceVisitorImpl<D,S,TCm
 
 	@Override
 	protected TDefinitions visit( final S o ) {
+		// build root "definitions" object with metadata
 		root = buildComponent( CMMNComponents.DEFINITIONS, o, TDefinitions.class )
 				.orElseGet( f::createTDefinitions );
 
+		// do visit
 		Optional<? extends TCmmnElement> el = visitSource( o );
 
-		el.ifPresent( tCmmnElement -> root.withCase( TCase.class.isInstance( tCmmnElement )
-				                                                      ? TCase.class.cast( tCmmnElement )
-				                                                      : f.createTCase() ) );
+		// ensure case is attached
+		if ( el.isPresent() && el.get() instanceof TCase ) {
+			TCase tCase = ( TCase ) el.get();
+			if ( ! root.getCase().contains( tCase ) ) {
+				root.withCase( tCase );
+			}
+		}
 		return root;
 	}
 

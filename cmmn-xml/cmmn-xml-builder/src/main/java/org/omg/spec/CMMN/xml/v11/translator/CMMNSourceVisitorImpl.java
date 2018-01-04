@@ -36,7 +36,7 @@ public abstract class CMMNSourceVisitorImpl<D,S,N,T> implements CMMNSourceVisito
 			Optional<? extends N> result = builder.get().apply( o );
 			return result.map( this::addElement );
 		} else {
-			throw  new UnsupportedOperationException( "Source not supported : " + getSourceType( o ) + " by visitor " + this.getClass().getSimpleName() );
+			throw  new UnsupportedOperationException( "Source not yet supported : " + getSourceType( o ) + " by visitor " + this.getClass().getSimpleName() );
 		}
 	}
 

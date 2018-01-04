@@ -40,7 +40,7 @@ public abstract class PlanItemDefinitionElementBuilder<S,T extends TPlanItemDefi
 	}
 
 	private <PID extends TPlanItemDefinition> void addPlanItemToParent( PID itemDef, TPlanFragment frag ) {
-		frag.getPlanItem().add( buildElement( CMMNElements.PLAN_ITEM, TPlanItem.class )
+		frag.withPlanItem( buildElement( CMMNElements.PLAN_ITEM, TPlanItem.class )
 				                         .orElse( getFactory().createTPlanItem() )
 				                         .withDefinitionRef( itemDef )
 				                         .withId( "def_" + itemDef.getId() ) );

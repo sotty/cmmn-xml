@@ -42,7 +42,7 @@ public class CaseElementBuilder<S> extends AbstractLinkingElementBuilder<S,TCase
 
 	@Override
 	public S post( final S s ) {
-		getBuildStack().pop();
+		assert element == getBuildStack().pop();
 		connectParent();
 		return super.post( s );
 	}

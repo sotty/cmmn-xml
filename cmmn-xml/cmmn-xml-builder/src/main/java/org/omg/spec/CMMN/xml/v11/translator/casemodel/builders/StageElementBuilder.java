@@ -34,7 +34,7 @@ public class StageElementBuilder<S> extends PlanItemDefinitionElementBuilder<S,T
 
 	@Override
 	public S post( final S s ) {
-		getBuildStack().pop();
+		assert element == getBuildStack().pop();
 		connectParent();
 		return super.post( s );
 	}

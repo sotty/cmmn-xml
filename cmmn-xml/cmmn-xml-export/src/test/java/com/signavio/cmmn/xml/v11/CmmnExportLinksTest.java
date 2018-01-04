@@ -1,12 +1,10 @@
 package com.signavio.cmmn.xml.v11;
 
-import org.json.JSONException;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import java.io.IOException;
 import java.util.List;
 
 import static org.testng.Assert.assertNull;
@@ -22,11 +20,14 @@ public class CmmnExportLinksTest extends CmmnXmlShapeTestBase {
 		load( "s2s", "signavio/sentry2sentry.json" );
 		load( "sNs", "signavio/manyS2S.json" );
 		load( "ml", "signavio/milestone.json" );
+		load( "ss", "signavio/stage2stage.json" );
+		load( "is", "signavio/innerSentry.json" );
+		load( "sis", "signavio/stageNestedSentries.json" );
 	}
 
 
 	@Test
-	public void testTaskLinkedSentry() throws IOException, JSONException {
+	public void testTaskLinkedSentry() {
 		Node ec = xNode( "ns", "/cmmn:definitions/cmmn:case/cmmn:casePlanModel/cmmn:planItem/cmmn:entryCriterion" );
 		Node xc = xNode( "ns", "/cmmn:definitions/cmmn:case/cmmn:casePlanModel/cmmn:planItem/cmmn:exitCriterion" );
 		Node st = xNode( "ns", "/cmmn:definitions/cmmn:case/cmmn:casePlanModel/cmmn:sentry" );
@@ -42,7 +43,7 @@ public class CmmnExportLinksTest extends CmmnXmlShapeTestBase {
 	}
 
 	@Test
-	public void testSentryLinkedSentry() throws IOException, JSONException {
+	public void testSentryLinkedSentry() {
 		NodeList pil = xList( "s2s", "/cmmn:definitions/cmmn:case/cmmn:casePlanModel/cmmn:planItem" );
 		NodeList sts = xList( "s2s", "/cmmn:definitions/cmmn:case/cmmn:casePlanModel/cmmn:sentry" );
 		NodeList exc = xList( "s2s", "/cmmn:definitions//cmmn:exitCriterion" );
@@ -85,7 +86,7 @@ public class CmmnExportLinksTest extends CmmnXmlShapeTestBase {
 	}
 
 	@Test
-	public void testMany2ManySentry() throws IOException, JSONException {
+	public void testMany2ManySentry() {
 		NodeList tsk = xList( "sNs", "/cmmn:definitions/cmmn:case/cmmn:casePlanModel/cmmn:task" );
 		assertEquals( 4, tsk.getLength() );
 
@@ -165,7 +166,7 @@ public class CmmnExportLinksTest extends CmmnXmlShapeTestBase {
 
 
 	@Test
-	public void testMilestoneLinks() throws IOException, JSONException {
+	public void testMilestoneLinks() {
 		Node ms = xNode( "ml", "//cmmn:milestone" );
 		Node pt = xNode( "ml", "//cmmn:processTask" );
 		Node el = xNode( "ml", "//cmmn:eventListener" );
@@ -200,6 +201,34 @@ public class CmmnExportLinksTest extends CmmnXmlShapeTestBase {
 		assertNotNull( s1 );
 		assertNotNull( s2 );
 
+	}
+
+
+	@Test
+	public void testInnerSentry() {
+		assertEquals( 3, xList( "is", "//cmmn:planItem" ).getLength() );
+		assertEquals( 2, xList( "is", "//cmmn:sentry" ).getLength() );
+		assertEquals( 2, xList( "is", "//cmmn:task" ).getLength() );
+		assertEquals( 1, xList( "is", "//cmmn:exitCriterion" ).getLength() );
+		assertEquals( 1, xList( "is", "//cmmn:entryCriterion" ).getLength() );
+		assertEquals( 1, xList( "is", "//cmmn:sentry//@exitCriterionRef" ).getLength() );
+	}
+
+
+	@Test
+	public void testSentry2Sentry() {
+		assertEquals( 2, xList( "ss", "//cmmn:planItem" ).getLength() );
+		assertEquals( 2, xList( "ss", "//cmmn:sentry" ).getLength() );
+		assertEquals( 1, xList( "ss", "//cmmn:exitCriterion" ).getLength() );
+		assertEquals( 1, xList( "ss", "//cmmn:entryCriterion" ).getLength() );
+		assertEquals( 1, xList( "ss", "//cmmn:sentry//@exitCriterionRef" ).getLength() );
+	}
+
+
+	@Test
+	public void testDeepSentries() {
+		assertEquals( 3, xList( "sis", "//cmmn:planItem" ).getLength() );
+		assertEquals( 2, xList( "sis", "//cmmn:stage" ).getLength() );
 	}
 
 }

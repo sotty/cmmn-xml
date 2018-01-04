@@ -9,8 +9,14 @@ public class CasePlanModelElementBuilder<S> extends AbstractLinkingElementBuilde
 
 	@Override
 	public S init( final S s ) {
-		element = getFactory().createTCase()
-					.withCasePlanModel( getFactory().createTStage().withId( Utils.randomID() ) );
+		if ( b.getBuildStack().size() == 1 &&  b.getBuildStack().peek() instanceof TCase ) {
+			// root case
+			element = ( TCase ) b.getBuildStack().peek();
+		} else {
+			// additional nested cases
+			element = getFactory().createTCase();
+		}
+		element.withCasePlanModel( getFactory().createTStage().withId( Utils.randomID() ) );
 		return s;
 	}
 
@@ -34,7 +40,7 @@ public class CasePlanModelElementBuilder<S> extends AbstractLinkingElementBuilde
 	@Override
 	public S post( final S s ) {
 		getRoot().withCase( element );
-		getBuildStack().pop();
+		assert element == getBuildStack().pop();
 		connectParent();
 		return super.post( s );
 	}

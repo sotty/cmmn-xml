@@ -118,10 +118,6 @@ public class CMMNRdfCaseBuilder extends CMMNCaseBuilder<Model,Resource> {
 		}
 
 	}
-	public String getNamespace( final Object r ) {
-		//TODO Fixme
-		return extractOrGenerateId( r );
-	}
 
 	@Override
 	public boolean isEntrySentry( String id ) {

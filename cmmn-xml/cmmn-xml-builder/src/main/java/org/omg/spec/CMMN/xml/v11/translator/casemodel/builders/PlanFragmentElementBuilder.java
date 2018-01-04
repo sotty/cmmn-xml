@@ -26,7 +26,7 @@ public class PlanFragmentElementBuilder<S> extends PlanItemDefinitionElementBuil
 
 	@Override
 	public S post( final S s ) {
-		getBuildStack().pop();
+		assert element == getBuildStack().pop();
 		// TODO Check the Spec to confirm that Plan Fragments can not be nested
 		connectParent( element, true, getBuildStack().peek() );
 		// plan fragments are necessarily discretionary
