@@ -75,14 +75,27 @@
                     <extension>true</extension>
                     <args>
                         <arg>-Xfluent-api</arg>
+                        <arg>-Xinheritance</arg>
+                        <arg>-Xannotate</arg>
+                        <arg>-no-header</arg>
                     </args>
-                    <forceRegenerate>true</forceRegenerate>
+                    <!--forceRegenerate>true</forceRegenerate-->
                     <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
                     <plugins>
                         <plugin>
                             <groupId>net.java.dev.jaxb2-commons</groupId>
                             <artifactId>jaxb-fluent-api</artifactId>
                             <version>2.1.8</version>
+                        </plugin>
+                        <plugin>
+                            <groupId>org.jvnet.jaxb2_commons</groupId>
+                            <artifactId>jaxb2-basics</artifactId>
+                            <version>0.11.1</version>
+                        </plugin>
+                        <plugin>
+                            <groupId>org.jvnet.jaxb2_commons</groupId>
+                            <artifactId>jaxb2-basics-annotate</artifactId>
+                            <version>1.0.4</version>
                         </plugin>
                     </plugins>
                 </configuration>
